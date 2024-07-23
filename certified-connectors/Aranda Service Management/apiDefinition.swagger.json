@@ -24,7 +24,7 @@
         "responses": {
           "200": {
             "description": "OK"
-          }         
+          }
         },
         "summary": "Add Attachment",
         "description": "Attach a file to a specific case record in ASMS.",
@@ -74,7 +74,7 @@
         "responses": {
           "200": {
             "description": "OK",
-            
+
             "schema": {
             }
           }
@@ -313,7 +313,7 @@
                 }
               }
             }
-          }        
+          }
         },
         "summary": "Search cases",
         "description": "Retrieves a list of ASMS case records depending on the search criteria added in the query.",
@@ -489,7 +489,7 @@
                   "title": "Case Type ID",
                   "x-ms-visibility": "important",
                   "x-ms-summary": "Case Type ID"
-                  
+
                 },
                 "projectId": {
                   "type": "integer",
@@ -497,7 +497,7 @@
                   "description": "Project ID",
                   "title": "Project ID",
                   "x-ms-visibility": "important",
-                  
+
                   "x-ms-summary": "Project ID"
                 },
                 "serviceId": {
@@ -506,7 +506,7 @@
                   "description": "Service ID",
                   "title": "Service ID",
                   "x-ms-visibility": "important",
-                  
+
                   "x-ms-summary": "Service ID"
                 },
                 "categoryId": {
@@ -515,21 +515,21 @@
                   "description": "Category ID",
                   "title": "Category ID",
                   "x-ms-visibility": "important",
-                  
+
                   "x-ms-summary": "Category ID"
                 },
                 "subject": {
                   "type": "string",
                   "description": "Subject",
                   "title": "Subject",
-                  
+
                   "x-ms-visibility": "important"
                 },
                 "description": {
                   "type": "string",
                   "description": "Detailed description of the case",
                   "title": "Description",
-                  
+
                   "x-ms-visibility": "important"
                 },
                 "stateId": {
@@ -537,7 +537,7 @@
                   "format": "int32",
                   "description": "Status ID",
                   "title": "Status ID",
-                  
+
                   "x-ms-visibility": "advanced"
                 },
                 "reasonId": {
@@ -644,7 +644,7 @@
                     "properties": {
                       "fieldId": {
                         "type": "string",
-                        
+
                         "description": "Field ID"
                       },
                       "values": {
@@ -652,7 +652,7 @@
                         "type": "array",
                         "items": {
                           "description": "Value",
-                          
+
                           "type": "string"
                         }
                       }
@@ -685,245 +685,245 @@
                   "type": "integer",
                   "format": "int32",
                   "title": "Case ID",
-                  
+
                   "description": "System ID for the record"
                 },
                 "idByProject": {
                   "description": "Case code for the record",
                   "title": "Case Code",
-                  
+
                   "type": "string"
                 },
                 "subject": {
                   "type": "string",
                   "title": "Subject",
-                  
+
                   "description": "Subject"
                 },
                 "description": {
                   "type": "string",
                   "title": "Description",
-                  
+
                   "description": "Detailed description of the case"
                 },
                 "commentary": {
                   "type": "string",
                   "title": "Solution",
-                  
+
                   "description": "Case solution"
                 },
                 "projectId": {
                   "type": "integer",
                   "format": "int32",
                   "title": "Project ID",
-                  
+
                   "description": "Project ID"
                 },
                 "projectName": {
                   "type": "string",
                   "title": "Project",
-                  
+
                   "description": "Project name"
                 },
                 "itemTypeName": {
                   "type": "string",
                   "title": "Case Type",
-                  
+
                   "description": "Case Type name"
                 },
                 "itemTypeId": {
                   "type": "integer",
                   "format": "int32",
                   "title": "Case Type ID",
-                  
+
                   "description": "Case Type ID"
                 },
                 "serviceId": {
                   "type": "integer",
                   "format": "int32",
                   "title": "Service ID",
-                  
+
                   "description": "Service ID"
                 },
                 "serviceName": {
                   "type": "string",
                   "title": "Service",
-                  
+
                   "description": "Service name"
                 },
                 "modelId": {
                   "type": "integer",
                   "format": "int32",
                   "title": "Model ID",
-                  
+
                   "description": "Model ID"
                 },
                 "modelName": {
                   "type": "string",
                   "title": "Model",
-                  
+
                   "description": "Model name"
                 },
                 "categoryId": {
                   "type": "integer",
                   "format": "int32",
                   "title": "Category ID",
-                  
+
                   "description": "Category ID"
                 },
                 "categoryName": {
                   "type": "string",
                   "description": "Category",
-                  
+
                   "title": "Category name"
                 },
                 "applicantId": {
                   "type": "integer",
                   "format": "int32",
                   "description": "Applicant ID",
-                  
+
                   "title": "Applicant ID"
                 },
                 "customerId": {
                   "type": "integer",
                   "format": "int32",
                   "title": "Client ID",
-                  
+
                   "description": "Client ID"
                 },
                 "customerName": {
                   "type": "string",
                   "title": "Client",
-                  
+
                   "description": "Client name"
                 },
                 "companyId": {
                   "type": "integer",
                   "format": "int32",
                   "title": "Company ID",
-                  
+
                   "description": "Company ID"
                 },
                 "companyName": {
                   "type": "string",
                   "title": "Company",
-                  
+
                   "description": "Company name"
                 },
                 "ciId": {
                   "type": "integer",
                   "format": "int32",
                   "title": "CI ID",
-                  
+
                   "description": "CI ID"
                 },
                 "ciName": {
                   "type": "string",
                   "title": "CI",
-                  
+
                   "description": "CI name"
                 },
                 "slaId": {
                   "type": "integer",
                   "format": "int32",
                   "title": "SLA ID",
-                  
+
                   "description": "SLA ID"
                 },
                 "slaName": {
                   "type": "string",
                   "title": "SLA",
-                  
+
                   "description": "SLA name"
                 },
                 "stateId": {
                   "type": "integer",
                   "format": "int32",
                   "title": "Status ID",
-                  
+
                   "description": "Status ID"
                 },
                 "stateName": {
                   "type": "string",
                   "title": "Status",
-                  
+
                   "description": "Status name"
                 },
                 "reasonId": {
                   "type": "integer",
                   "format": "int32",
                   "title": "Reason ID",
-                  
+
                   "description": "Reason ID"
                 },
                 "reasonName": {
                   "type": "string",
                   "title": "Reason",
-                  
+
                   "description": "Reason name"
                 },
                 "groupId": {
                   "type": "integer",
                   "format": "int32",
                   "title": "Group ID",
-                  
+
                   "description": "Group ID"
                 },
                 "groupName": {
                   "type": "string",
                   "title": "Group",
-                  
+
                   "description": "Group name"
                 },
                 "responsibleId": {
                   "type": "integer",
                   "format": "int32",
                   "title": "Responsible ID",
-                  
+
                   "description": "Responsible ID"
                 },
                 "responsibleName": {
                   "type": "string",
                   "title": "Responsible",
-                  
+
                   "description": "Responsible name"
                 },
                 "registryTypeId": {
                   "type": "integer",
                   "format": "int32",
                   "title": "Registry type ID",
-                  
+
                   "description": "Registry type ID"
                 },
                 "registryTypeName": {
                   "type": "string",
                   "title": "Registry type",
-                  
+
                   "description": "Registry type name"
                 },
                 "impactId": {
                   "type": "integer",
                   "format": "int32",
                   "title": "Impact ID",
-                  
+
                   "description": "Impact ID"
                 },
                 "impactName": {
                   "type": "string",
                   "title": "Impact",
-                  
+
                   "description": "Impact name"
                 },
                 "urgencyId": {
                   "type": "integer",
                   "format": "int32",
                   "title": "Urgency ID",
-                  
+
                   "description": "Urgency ID"
                 },
                 "urgencyName": {
                   "type": "string",
-                  
+
                   "title": "Urgency",
                   "description": "Urgency name"
                 },
@@ -931,168 +931,168 @@
                   "type": "integer",
                   "format": "int32",
                   "title": "Priority ID",
-                  
+
                   "description": "Priority ID"
                 },
                 "priorityName": {
                   "type": "string",
                   "title": "Priority",
-                  
+
                   "description": "Priority name"
                 },
                 "riskId": {
                   "type": "integer",
                   "format": "int32",
                   "title": "Risk ID",
-                  
+
                   "description": "Risk ID"
                 },
                 "riskName": {
                   "type": "string",
                   "title": "Risk",
-                  
+
                   "description": "Risk name"
                 },
                 "providerId": {
                   "type": "integer",
                   "format": "int32",
                   "title": "Provider ID",
-                  
+
                   "description": "Provider ID"
                 },
                 "providerName": {
                   "type": "string",
                   "title": "Provider",
-                  
+
                   "description": "Provider name"
                 },
                 "ucId": {
                   "type": "integer",
                   "format": "int32",
                   "title": "UC ID",
-                  
+
                   "description": "UC ID"
                 },
                 "ucName": {
                   "type": "string",
                   "title": "UC",
-                  
+
                   "description": "UC name"
                 },
                 "unitId": {
                   "type": "integer",
                   "format": "int32",
                   "title": "Organizational Area ID",
-                  
+
                   "description": "Organizational Area ID"
                 },
                 "unitName": {
                   "type": "string",
                   "title": "Organizational Area",
-                  
+
                   "description": "Organizational area name"
                 },
                 "olaId": {
                   "type": "integer",
                   "format": "int32",
                   "title": "OLA ID",
-                  
+
                   "description": "OLA ID"
                 },
                 "olaName": {
                   "type": "string",
                   "title": "OLA",
-                  
+
                   "description": "OLA name"
                 },
                 "openedDate": {
                   "type": "string",
                   "title": "Registry date",
-                  
+
                   "description": "Registry date"
                 },
                 "closedDate": {
                   "type": "string",
                   "title": "Closed date",
-                  
+
                   "description": "Closed date"
                 },
                 "finalDate": {
                   "type": "string",
                   "title": "Final date",
-                  
+
                   "description": "Final date (only for Task records)"
                 },
                 "initialDate": {
                   "type": "string",
                   "title": "Initial date",
-                  
+
                   "description": "Initial date (only for Task records)"
                 },
                 "cost": {
                   "type": "number",
                   "title": "Costs",
-                  
+
                   "description": "Costs"
                 },
                 "realCost": {
                   "type": "number",
                   "title": "Real cost",
-                  
+
                   "description": "Real cost"
                 },
                 "estimatedCost": {
                   "type": "number",
                   "title": "Estimated cost",
-                  
+
                   "description": "Estimated cost"
                 },
                 "price": {
                   "type": "number",
                   "title": "Price",
-                  
+
                   "description": "Price"
                 },
                 "interfaceId": {
                   "type": "string",
                   "title": "Interface ID",
-                  
+
                   "description": "Interface ID"
                 },
                 "isClosed": {
                   "type": "boolean",
                   "title": "Closed",
-                  
+
                   "description": "Closed"
                 },
                 "currentProgress": {
                   "type": "number",
                   "title": "Progress",
-                  
+
                   "description": "Progress"
                 },
                 "realDate": {
                   "type": "string",
                   "title": "Real date",
-                  
+
                   "description": "Real date"
                 },
                 "estimatedDate": {
                   "type": "string",
                   "title": "Estimated Date",
-                  
+
                   "description": "Estimated Date"
                 },
                 "authorId": {
                   "type": "integer",
                   "format": "int32",
                   "title": "Author ID",
-                  
+
                   "description": "Author ID"
                 },
                 "authorName": {
                   "type": "string",
-                  "title": "Author",                 
+                  "title": "Author",
                   "description": "Author name"
                 },
                 "additionalFields": {
@@ -1107,12 +1107,12 @@
                       "fieldId": {
                         "title": "Field Id",
                         "type": "integer",
-                        "format": "int32",                       
+                        "format": "int32",
                         "description": "Field Id"
                       },
                       "nameField": {
                         "type": "string",
-                        "title": "Name field",                     
+                        "title": "Name field",
                         "description": "Name field"
                       },
                       "valueDetails":{
@@ -1125,12 +1125,12 @@
                             "title": "Value Id",
                             "type": "integer",
                             "format": "int32",
-                            "x-nullable":true,                      
+                            "x-nullable":true,
                             "description": "Value Id"
                           },
                           "value":{
                             "type": "string",
-                            "title": "Field value",                     
+                            "title": "Field value",
                             "description": "Field value"
                           }
                         }
@@ -1378,7 +1378,374 @@
         "x-ms-visibility": "internal",
         "parameters": []
       }
+    },
+    "/parameters/project": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "200",
+            "schema": {
+              "$ref": "#/definitions/propertyTicket_response"
+            }
+          }
+        },
+        "summary": "Project",
+        "description": "Project",
+        "operationId": "GetProject",
+        "x-ms-visibility": "internal",
+        "parameters": []
+      }
+    },
+    "/parameters/service": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/propertyTicket_response"
+            }
+          }
+        },
+        "summary": "services",
+        "operationId": "GetService",
+        "x-ms-visibility": "internal",
+        "parameters": [
+          {
+            "$ref": "#/parameters/itemType"
+          },
+          {
+            "$ref": "#/parameters/projectId"
+          }
+        ]
+      }
+    },
+    "/parameters/categoryByService": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/propertyTicket_response"
+            }
+          }
+        },
+        "summary": "categories",
+        "operationId": "GetCategory",
+        "x-ms-visibility": "internal",
+        "parameters": [
+          {
+            "$ref": "#/parameters/itemType"
+          },
+          {
+            "$ref": "#/parameters/serviceId"
+          }
+        ]
+      }
+    },
+    "/parameters/cis": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/propertyTicket_response"
+            }
+          }
+        },
+        "summary": "Item Configuration",
+        "operationId": "GetCI",
+        "x-ms-visibility": "internal",
+        "parameters": [
+          {
+            "$ref": "#/parameters/itemType"
+          },
+          {
+            "$ref": "#/parameters/projectId"
+          },
+          {
+            "$ref": "#/parameters/serviceId"
+          }
+        ]
+      }
+    },
+    "/parameters/state": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/propertyTicket_response"
+            }
+          }
+        },
+        "summary": "State",
+        "operationId": "GetState",
+        "x-ms-visibility": "internal",
+        "parameters": [
+          {
+            "$ref": "#/parameters/itemType"
+          },
+          {
+            "$ref": "#/parameters/categoryId"
+          },
+          {
+            "$ref": "#/parameters/serviceId"
+          }
+        ]
+      }
+    },
+    "/parameters/reasonsForState": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/propertyTicket_response"
+            }
+          }
+        },
+        "summary": "Reason",
+        "operationId": "GetReason",
+        "x-ms-visibility": "internal",
+        "parameters": [
+          {
+            "$ref": "#/parameters/stateId"
+          }
+        ]
+      }
+    },
+    "/parameters/groupsByState": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/propertyTicket_response"
+            }
+          }
+        },
+        "summary": "Group",
+        "operationId": "GetGroup",
+        "x-ms-visibility": "internal",
+        "parameters": [
+          {
+            "$ref": "#/parameters/stateId"
+          },
+          {
+            "$ref": "#/parameters/serviceId"
+          }
+        ]
+      }
+    },
+    "/parameters/responsible": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/propertyTicket_response"
+            }
+          }
+        },
+        "summary": "Responsible",
+        "operationId": "GetResponsible",
+        "x-ms-visibility": "internal",
+        "parameters": [
+          {
+            "$ref": "#/parameters/groupId"
+          },
+          {
+            "$ref": "#/parameters/projectId"
+          }
+        ]
+      }
+    },
+    "/parameters/applicant": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/propertyTicket_response"
+            }
+          }
+        },
+        "summary": "Applicant",
+        "operationId": "GetApplicant",
+        "x-ms-visibility": "internal",
+        "parameters": [
+          {
+            "$ref": "#/parameters/itemType"
+          },
+          {
+            "$ref": "#/parameters/projectId"
+          },
+          {
+            "$ref": "#/parameters/serviceId"
+          }
+        ]
+      }
+    },
+    "/parameters/client": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/propertyTicket_response"
+            }
+          }
+        },
+        "summary": "Client",
+        "operationId": "GetClient",
+        "x-ms-visibility": "internal",
+        "parameters": [
+          {
+            "$ref": "#/parameters/itemType"
+          },
+          {
+            "$ref": "#/parameters/projectId"
+          },
+          {
+            "$ref": "#/parameters/serviceId"
+          },
+          {
+            "name": "companyId",
+            "in": "query",
+            "required": false,
+            "x-nullable": true,
+            "type": "integer",
+            "x-ms-visibility": "advanced",
+            "x-ms-summary": "Company ID",
+            "description": "Company ID"
+          }
+        ]
+      }
+    },
+    "/parameters/companies": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/propertyTicket_response"
+            }
+          }
+        },
+        "summary": "Companies",
+        "operationId": "GetCompanies",
+        "x-ms-visibility": "internal",
+        "parameters": [
+          {
+            "$ref": "#/parameters/itemType"
+          },
+          {
+            "$ref": "#/parameters/projectId"
+          },
+          {
+            "$ref": "#/parameters/serviceId"
+          }
+        ]
+      }
+    },
+    "/parameters/registryType": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/propertyTicket_response"
+            }
+          }
+        },
+        "summary": "Registry Type",
+        "operationId": "GetRegistryType",
+        "x-ms-visibility": "internal",
+        "parameters": [
+        ]
+      }
+    },
+    "/parameters/urgency": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/propertyTicket_response"
+            }
+          }
+        },
+        "summary": "Urgency",
+        "operationId": "GetUrgency",
+        "x-ms-visibility": "internal",
+        "parameters": [
+        ]
+      }
+    },
+    "/parameters/impact": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/propertyTicket_response"
+            }
+          }
+        },
+        "summary": "Impact",
+        "operationId": "GetImpact",
+        "x-ms-visibility": "internal",
+        "parameters": [
+        ]
+      }
+    },
+    "/parameters/units": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/propertyTicket_response"
+            }
+          }
+        },
+        "summary": "Organizational Area",
+        "operationId": "GetOrganizationalArea",
+        "x-ms-visibility": "internal",
+        "parameters": [
+          {
+            "$ref": "#/parameters/serviceId"
+          },
+          {
+            "$ref": "#/parameters/projectId"
+          }
+        ]
+      }
+    },
+    "/parameters/provider": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/propertyTicket_response"
+            }
+          }
+        },
+        "summary": "Provider",
+        "operationId": "GetProviders",
+        "x-ms-visibility": "internal",
+        "parameters": [
+          {
+            "$ref": "#/parameters/serviceId"
+          },
+          {
+            "$ref": "#/parameters/projectId"
+          }
+        ]
+      }
     }
+
   },
   "x-ms-connector-metadata": [
     {
