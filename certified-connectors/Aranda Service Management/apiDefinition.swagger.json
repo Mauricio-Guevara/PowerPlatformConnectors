@@ -1465,6 +1465,14 @@
             "schema": {
               "type": "object",
               "properties": {
+                "ticketCode": {
+                  "type": "string",
+                  "x-ms-visibility": "important",
+                  "x-ms-summary": "Ticket code ",
+                  "x-nullable": false,
+                  "title": "Ticket",
+                  "description": "Ticket code"
+                },
                 "itemType": {
                   "type": "string",
                   "description": "Case Type ID",
@@ -1597,15 +1605,8 @@
                     "value-path": "id",
                     "value-title": "name",
                     "parameters": {
-                      "allStates" : true,
-                      "itemType": {
-                        "parameter": "itemType"
-                      },
-                      "categoryId": {
-                        "parameter": "categoryId"
-                      },
-                      "serviceId": {
-                        "parameter": "serviceId"
+                      "ticketId": {
+                        "parameter": "ticketCode"
                       }
                     }
                   },
@@ -1614,17 +1615,8 @@
                     "itemValuePath": "id",
                     "itemTitlePath": "name",
                     "parameters": {
-                      "itemType": {
-                        "parameterReference": "requestBody/itemType"
-                      },
-                      "categoryId": {
-                        "parameterReference": "requestBody/categoryId"
-                      },
-                      "serviceId": {
-                        "parameterReference": "requestBody/serviceId"
-                      },
-                      "allStates": {
-                        "value": true
+                      "ticketId": {
+                        "parameterReference": "requestBody/ticketCode"
                       }
                     }
                   }
@@ -2154,26 +2146,13 @@
         "x-ms-visibility": "internal",
         "parameters": [
           {
-            "name": "allStates",
+            "name": "ticketId",
             "in": "query",
-            "required": false,
-            "type": "boolean",
+            "required": true,
+            "type": "string",
             "x-ms-visibility": "advanced",
-            "x-ms-summary": "Item Type",
-            "description": "Item Type",
-            "enum": [
-              true,
-              false
-            ]
-          },
-          {
-            "$ref": "#/parameters/itemTypeNoRequired"
-          },
-          {
-            "$ref": "#/parameters/categoryIdNoRequired"
-          },
-          {
-            "$ref": "#/parameters/serviceIdNoRequired"
+            "x-ms-summary": "Ticket id",
+            "description": "Ticket id"
           }
         ]
       }
