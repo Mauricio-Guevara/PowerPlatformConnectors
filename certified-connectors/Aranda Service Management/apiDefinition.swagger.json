@@ -4,7 +4,7 @@
     "x-ms-deployment-version": "1.0.0",
     "title": "Aranda Service Management",
     "description": "Boost your company's productivity and transform your users' experience with Aranda Service Management Suite, the multi-tenant solution that allows you to manage, integrate, and automate business processes and services.",
-    "version": "2.0",
+    "version": "3.0",
     "contact": {
       "name": "Aranda Software",
       "url": "https://arandasoft.com/",
@@ -117,8 +117,8 @@
                     "description": "System ID for the record"
                   },
                   "idByProject": {
-                    "description": "Case code for the record",
-                    "title": "Case Code",
+                    "description": "Id by project for the record",
+                    "title": "Id by project",
                     "type": "string"
                   },
                   "subject": {
@@ -457,8 +457,8 @@
                   "description": "Case ID"
                 },
                 "idByProject": {
-                  "description": "Case code for the record",
-                  "title": "Case Code",
+                  "description": "Id by project for the record",
+                  "title": "Id by project",
                   "type": "string"
                 }
               }
@@ -1026,8 +1026,8 @@
                   "description": "System ID for the record"
                 },
                 "idByProject": {
-                  "description": "Case code for the record",
-                  "title": "Case Code",
+                  "description": "Id by project for the record",
+                  "title": "Id by project",
                   "type": "string"
                 },
                 "subject": {
@@ -1465,14 +1465,6 @@
             "schema": {
               "type": "object",
               "properties": {
-                "ticketCode": {
-                  "type": "string",
-                  "x-ms-visibility": "important",
-                  "x-ms-summary": "Ticket code ",
-                  "x-nullable": false,
-                  "title": "Ticket",
-                  "description": "Ticket code"
-                },
                 "itemType": {
                   "type": "string",
                   "description": "Case Type ID",
@@ -1605,8 +1597,14 @@
                     "value-path": "id",
                     "value-title": "name",
                     "parameters": {
-                      "ticketId": {
-                        "parameter": "ticketCode"
+                      "itemType": {
+                        "parameter": "itemType"
+                      },
+                      "serviceId": {
+                        "parameter": "serviceId"
+                      },
+                      "categoryId": {
+                        "parameter": "categoryId"
                       }
                     }
                   },
@@ -1615,8 +1613,14 @@
                     "itemValuePath": "id",
                     "itemTitlePath": "name",
                     "parameters": {
-                      "ticketId": {
-                        "parameterReference": "requestBody/ticketCode"
+                      "itemType": {
+                        "parameterReference": "requestBody/itemType"
+                      },
+                      "serviceId": {
+                        "parameterReference": "requestBody/serviceId"
+                      },
+                      "categoryId": {
+                        "parameterReference": "requestBody/categoryId"
                       }
                     }
                   }
@@ -1636,6 +1640,15 @@
                     "parameters": {
                       "stateId": {
                         "parameter": "stateId"
+                      },
+                      "serviceId": {
+                        "parameter": "serviceId"
+                      },
+                      "itemType": {
+                        "parameter": "itemType"
+                      },
+                      "categoryId": {
+                        "parameter": "categoryId"
                       }
                     }
                   },
@@ -1646,6 +1659,15 @@
                     "parameters": {
                       "stateId": {
                         "parameterReference": "requestBody/stateId"
+                      },
+                      "itemType": {
+                        "parameterReference": "requestBody/itemType"
+                      },
+                      "serviceId": {
+                        "parameterReference": "requestBody/serviceId"
+                      },
+                      "categoryId": {
+                        "parameterReference": "requestBody/categoryId"
                       }
                     }
                   }
@@ -2146,13 +2168,13 @@
         "x-ms-visibility": "internal",
         "parameters": [
           {
-            "name": "ticketId",
-            "in": "query",
-            "required": true,
-            "type": "string",
-            "x-ms-visibility": "advanced",
-            "x-ms-summary": "Ticket id",
-            "description": "Ticket id"
+            "$ref": "#/parameters/itemTypeNoRequired"
+          },
+          {
+            "$ref": "#/parameters/serviceIdNoRequired"
+          },
+          {
+            "$ref": "#/parameters/categoryIdNoRequired"
           }
         ]
       }
@@ -2579,7 +2601,7 @@
       "type": "string",
       "x-ms-url-encoding": "single",
       "x-ms-visibility": "important",
-      "x-ms-summary": "Case code",
+      "x-ms-summary": "Id by project",
       "description": "Code of the record for which metadata will be attached."
     },
     "ticketIdHeader": {
@@ -2589,7 +2611,7 @@
       "type": "string",
       "x-ms-url-encoding": "single",
       "x-ms-visibility": "important",
-      "x-ms-summary": "Case code",
+      "x-ms-summary": "Id by project",
       "description": "Code of the record for which metadata will be attached."
     }
   },
