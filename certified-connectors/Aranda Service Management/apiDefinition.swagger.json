@@ -4,7 +4,7 @@
     "x-ms-deployment-version": "1.0.0",
     "title": "Aranda Service Management",
     "description": "Boost your company's productivity and transform your users' experience with Aranda Service Management Suite, the multi-tenant solution that allows you to manage, integrate, and automate business processes and services.",
-    "version": "3.0",
+    "version": "2.0",
     "contact": {
       "name": "Aranda Software",
       "url": "https://arandasoft.com/",
@@ -829,84 +829,13 @@
                     }
                   }
                 },
-                "registryTypeId": {
-                  "type": "integer",
-                  "format": "int32",
-                  "description": "Registry type ID",
-                  "title": "Registry type ID",
-                  "x-nullable": true,
-                  "x-ms-visibility": "advanced",
-                  "x-ms-dynamic-values": {
-                    "operationId": "GetRegistryType",
-                    "value-path": "id",
-                    "value-title": "name"
-                  }
-                },
                 "ciId": {
                   "type": "integer",
                   "format": "int32",
                   "description": "CI ID",
                   "title": "CI ID",
                   "x-nullable": true,
-                  "x-ms-visibility": "advanced",
-                  "x-ms-dynamic-values": {
-                    "operationId": "GetCI",
-                    "value-path": "id",
-                    "value-title": "name",
-                    "parameters": {
-                      "itemType": {
-                        "parameter": "itemType"
-                      },
-                      "projectId": {
-                        "parameter": "projectId"
-                      },
-                      "serviceId": {
-                        "parameter": "serviceId"
-                      }
-                    }
-                  },
-                  "x-ms-dynamic-list": {
-                    "operationId": "GetCI",
-                    "itemValuePath": "id",
-                    "itemTitlePath": "name",
-                    "parameters": {
-                      "itemType": {
-                        "parameterReference": "requestBody/itemType"
-                      },
-                      "projectId": {
-                        "parameterReference": "requestBody/projectId"
-                      },
-                      "serviceId": {
-                        "parameterReference": "requestBody/serviceId"
-                      }
-                    }
-                  }
-                },
-                "urgencyId": {
-                  "type": "integer",
-                  "format": "int32",
-                  "description": "Urgency ID",
-                  "title": "Urgency ID",
-                  "x-nullable": true,
-                  "x-ms-visibility": "advanced",
-                  "x-ms-dynamic-values": {
-                    "operationId": "GetUrgency",
-                    "value-path": "id",
-                    "value-title": "name"
-                  }
-                },
-                "impactId": {
-                  "type": "integer",
-                  "format": "int32",
-                  "description": "Impact ID",
-                  "title": "Impact ID",
-                  "x-nullable": true,
-                  "x-ms-visibility": "advanced",
-                  "x-ms-dynamic-values": {
-                    "operationId": "GetImpact",
-                    "value-path": "id",
-                    "value-title": "name"
-                  }
+                  "x-ms-visibility": "advanced"
                 },
                 "providerId": {
                   "type": "integer",
@@ -974,6 +903,45 @@
                         "parameterReference": "requestBody/serviceId"
                       }
                     }
+                  }
+                },
+                "registryTypeId": {
+                  "type": "integer",
+                  "format": "int32",
+                  "description": "Registry type ID",
+                  "title": "Registry type ID",
+                  "x-nullable": true,
+                  "x-ms-visibility": "advanced",
+                  "x-ms-dynamic-values": {
+                    "operationId": "GetRegistryType",
+                    "value-path": "id",
+                    "value-title": "name"
+                  }
+                },
+                "urgencyId": {
+                  "type": "integer",
+                  "format": "int32",
+                  "description": "Urgency ID",
+                  "title": "Urgency ID",
+                  "x-nullable": true,
+                  "x-ms-visibility": "advanced",
+                  "x-ms-dynamic-values": {
+                    "operationId": "GetUrgency",
+                    "value-path": "id",
+                    "value-title": "name"
+                  }
+                },
+                "impactId": {
+                  "type": "integer",
+                  "format": "int32",
+                  "description": "Impact ID",
+                  "title": "Impact ID",
+                  "x-nullable": true,
+                  "x-ms-visibility": "advanced",
+                  "x-ms-dynamic-values": {
+                    "operationId": "GetImpact",
+                    "value-path": "id",
+                    "value-title": "name"
                   }
                 },
                 "additionalFields": {
@@ -1465,35 +1433,6 @@
             "schema": {
               "type": "object",
               "properties": {
-                "itemType": {
-                  "type": "string",
-                  "description": "Case Type ID",
-                  "title": "Case Type ID",
-                  "x-nullable": true,
-                  "x-ms-visibility": "important",
-                  "x-ms-summary": "Case Type ID",
-                  "enum": [
-                    "Incidents",
-                    "Problem",
-                    "Change",
-                    "ServiceCall",
-                    "Release"
-                  ]
-                },
-                "projectId": {
-                  "type": "integer",
-                  "format": "int32",
-                  "description": "Project ID",
-                  "title": "Project ID",
-                  "x-nullable": true,
-                  "x-ms-visibility": "important",
-                  "x-ms-summary": "Project ID",
-                  "x-ms-dynamic-values": {
-                    "operationId": "GetProject",
-                    "value-path": "id",
-                    "value-title": "name"
-                  }
-                },
                 "serviceId": {
                   "type": "integer",
                   "format": "int32",
@@ -1501,33 +1440,7 @@
                   "title": "Service ID",
                   "x-nullable": true,
                   "x-ms-visibility": "important",
-                  "x-ms-summary": "Service ID",
-                  "x-ms-dynamic-values": {
-                    "operationId": "GetService",
-                    "value-path": "id",
-                    "value-title": "name",
-                    "parameters": {
-                      "itemType": {
-                        "parameter": "itemType"
-                      },
-                      "projectId": {
-                        "parameter": "projectId"
-                      }
-                    }
-                  },
-                  "x-ms-dynamic-list": {
-                    "operationId": "GetService",
-                    "itemValuePath": "id",
-                    "itemTitlePath": "name",
-                    "parameters": {
-                      "projectId": {
-                        "parameterReference": "requestBody/projectId"
-                      },
-                      "itemType": {
-                        "parameterReference": "requestBody/itemType"
-                      }
-                    }
-                  }
+                  "x-ms-summary": "Service ID"
                 },
                 "categoryId": {
                   "type": "integer",
@@ -1536,33 +1449,7 @@
                   "title": "Category ID",
                   "x-nullable": true,
                   "x-ms-visibility": "important",
-                  "x-ms-summary": "Category ID",
-                  "x-ms-dynamic-values": {
-                    "operationId": "GetCategory",
-                    "value-path": "id",
-                    "value-title": "name",
-                    "parameters": {
-                      "itemType": {
-                        "parameter": "itemType"
-                      },
-                      "serviceId": {
-                        "parameter": "serviceId"
-                      }
-                    }
-                  },
-                  "x-ms-dynamic-list": {
-                    "operationId": "GetCategory",
-                    "itemValuePath": "id",
-                    "itemTitlePath": "name",
-                    "parameters": {
-                      "serviceId": {
-                        "parameterReference": "requestBody/serviceId"
-                      },
-                      "itemType": {
-                        "parameterReference": "requestBody/itemType"
-                      }
-                    }
-                  }
+                  "x-ms-summary": "Category ID"
                 },
                 "subject": {
                   "type": "string",
@@ -1591,40 +1478,7 @@
                   "description": "Status ID",
                   "title": "Status ID",
                   "x-nullable": true,
-                  "x-ms-visibility": "advanced",
-                  "x-ms-dynamic-values": {
-                    "operationId": "GetState",
-                    "value-path": "id",
-                    "value-title": "name",
-                    "parameters": {
-                      "itemType": {
-                        "parameter": "itemType"
-                      },
-                      "serviceId": {
-                        "parameter": "serviceId"
-                      },
-                      "categoryId": {
-                        "parameter": "categoryId"
-                      }
-                    }
-                  },
-                  "x-ms-dynamic-list": {
-                    "operationId": "GetState",
-                    "itemValuePath": "id",
-                    "itemTitlePath": "name",
-                    "parameters": {
-                      "itemType": {
-                        "parameterReference": "requestBody/itemType"
-                      },
-                      "serviceId": {
-                        "parameterReference": "requestBody/serviceId"
-                      },
-                      "categoryId": {
-                        "parameterReference": "requestBody/categoryId"
-                      }
-                    }
-                  }
-
+                  "x-ms-visibility": "advanced"
                 },
                 "reasonId": {
                   "type": "integer",
@@ -1632,45 +1486,7 @@
                   "description": "Reason ID",
                   "title": "Reason ID",
                   "x-nullable": true,
-                  "x-ms-visibility": "advanced",
-                  "x-ms-dynamic-values": {
-                    "operationId": "GetReason",
-                    "value-path": "id",
-                    "value-title": "name",
-                    "parameters": {
-                      "stateId": {
-                        "parameter": "stateId"
-                      },
-                      "serviceId": {
-                        "parameter": "serviceId"
-                      },
-                      "itemType": {
-                        "parameter": "itemType"
-                      },
-                      "categoryId": {
-                        "parameter": "categoryId"
-                      }
-                    }
-                  },
-                  "x-ms-dynamic-list": {
-                    "operationId": "GetReason",
-                    "itemValuePath": "id",
-                    "itemTitlePath": "name",
-                    "parameters": {
-                      "stateId": {
-                        "parameterReference": "requestBody/stateId"
-                      },
-                      "itemType": {
-                        "parameterReference": "requestBody/itemType"
-                      },
-                      "serviceId": {
-                        "parameterReference": "requestBody/serviceId"
-                      },
-                      "categoryId": {
-                        "parameterReference": "requestBody/categoryId"
-                      }
-                    }
-                  }
+                  "x-ms-visibility": "advanced"
                 },
                 "groupId": {
                   "type": "integer",
@@ -1678,33 +1494,7 @@
                   "description": "Group ID",
                   "title": "Group ID",
                   "x-nullable": true,
-                  "x-ms-visibility": "advanced",
-                  "x-ms-dynamic-values": {
-                    "operationId": "GetGroup",
-                    "value-path": "id",
-                    "value-title": "name",
-                    "parameters": {
-                      "stateId": {
-                        "parameter": "stateId"
-                      },
-                      "serviceId": {
-                        "parameter": "serviceId"
-                      }
-                    }
-                  },
-                  "x-ms-dynamic-list": {
-                    "operationId": "GetGroup",
-                    "itemValuePath": "id",
-                    "itemTitlePath": "name",
-                    "parameters": {
-                      "stateId": {
-                        "parameterReference": "requestBody/stateId"
-                      },
-                      "serviceId": {
-                        "parameterReference": "requestBody/serviceId"
-                      }
-                    }
-                  }
+                  "x-ms-visibility": "advanced"
                 },
                 "responsibleId": {
                   "type": "integer",
@@ -1712,33 +1502,7 @@
                   "description": "Responsible ID",
                   "title": "Responsible ID",
                   "x-nullable": true,
-                  "x-ms-visibility": "advanced",
-                  "x-ms-dynamic-values": {
-                    "operationId": "GetResponsible",
-                    "value-path": "id",
-                    "value-title": "name",
-                    "parameters": {
-                      "groupId": {
-                        "parameter": "groupId"
-                      },
-                      "projectId": {
-                        "parameter": "projectId"
-                      }
-                    }
-                  },
-                  "x-ms-dynamic-list": {
-                    "operationId": "GetResponsible",
-                    "itemValuePath": "id",
-                    "itemTitlePath": "name",
-                    "parameters": {
-                      "groupId": {
-                        "parameterReference": "requestBody/groupId"
-                      },
-                      "projectId": {
-                        "parameterReference": "requestBody/projectId"
-                      }
-                    }
-                  }
+                  "x-ms-visibility": "advanced"
                 },
                 "applicantId": {
                   "type": "integer",
@@ -1746,39 +1510,7 @@
                   "description": "Applicant ID",
                   "title": "Applicant ID",
                   "x-nullable": true,
-                  "x-ms-visibility": "advanced",
-                  "x-ms-dynamic-values": {
-                    "operationId": "GetApplicant",
-                    "value-path": "id",
-                    "value-title": "name",
-                    "parameters": {
-                      "itemType": {
-                        "parameter": "itemType"
-                      },
-                      "projectId": {
-                        "parameter": "projectId"
-                      },
-                      "serviceId": {
-                        "parameter": "serviceId"
-                      }
-                    }
-                  },
-                  "x-ms-dynamic-list": {
-                    "operationId": "GetApplicant",
-                    "itemValuePath": "id",
-                    "itemTitlePath": "name",
-                    "parameters": {
-                      "itemType": {
-                        "parameterReference": "requestBody/itemType"
-                      },
-                      "serviceId": {
-                        "parameterReference": "requestBody/serviceId"
-                      },
-                      "projectId": {
-                        "parameterReference": "requestBody/projectId"
-                      }
-                    }
-                  }
+                  "x-ms-visibility": "advanced"
                 },
                 "customerId": {
                   "type": "integer",
@@ -1786,39 +1518,7 @@
                   "description": "Client",
                   "title": "Client",
                   "x-nullable": true,
-                  "x-ms-visibility": "advanced",
-                  "x-ms-dynamic-values": {
-                    "operationId": "GetClient",
-                    "value-path": "id",
-                    "value-title": "name",
-                    "parameters": {
-                      "itemType": {
-                        "parameter": "itemType"
-                      },
-                      "projectId": {
-                        "parameter": "projectId"
-                      },
-                      "serviceId": {
-                        "parameter": "serviceId"
-                      }
-                    }
-                  },
-                  "x-ms-dynamic-list": {
-                    "operationId": "GetClient",
-                    "itemValuePath": "id",
-                    "itemTitlePath": "name",
-                    "parameters": {
-                      "itemType": {
-                        "parameterReference": "requestBody/itemType"
-                      },
-                      "projectId": {
-                        "parameterReference": "requestBody/projectId"
-                      },
-                      "serviceId": {
-                        "parameterReference": "requestBody/serviceId"
-                      }
-                    }
-                  }
+                  "x-ms-visibility": "advanced"
                 },
                 "companyId": {
                   "type": "integer",
@@ -1826,39 +1526,31 @@
                   "description": "Company ID",
                   "title": "Company ID",
                   "x-nullable": true,
-                  "x-ms-visibility": "advanced",
-                  "x-ms-dynamic-values": {
-                    "operationId": "GetCompanies",
-                    "value-path": "id",
-                    "value-title": "name",
-                    "parameters": {
-                      "itemType": {
-                        "parameter": "itemType"
-                      },
-                      "projectId": {
-                        "parameter": "projectId"
-                      },
-                      "serviceId": {
-                        "parameter": "serviceId"
-                      }
-                    }
-                  },
-                  "x-ms-dynamic-list": {
-                    "operationId": "GetCompanies",
-                    "itemValuePath": "id",
-                    "itemTitlePath": "name",
-                    "parameters": {
-                      "itemType": {
-                        "parameterReference": "requestBody/itemType"
-                      },
-                      "projectId": {
-                        "parameterReference": "requestBody/projectId"
-                      },
-                      "serviceId": {
-                        "parameterReference": "requestBody/serviceId"
-                      }
-                    }
-                  }
+                  "x-ms-visibility": "advanced"
+                },
+                "ciId": {
+                  "type": "integer",
+                  "format": "int32",
+                  "description": "CI ID",
+                  "title": "CI ID",
+                  "x-nullable": true,
+                  "x-ms-visibility": "advanced"
+                },
+                "providerId": {
+                  "type": "integer",
+                  "format": "int32",
+                  "description": "Provider ID",
+                  "title": "Provider ID",
+                  "x-nullable": true,
+                  "x-ms-visibility": "advanced"
+                },
+                "unitId": {
+                  "type": "integer",
+                  "format": "int32",
+                  "description": "Organizational Area ID",
+                  "title": "Organizational Area ID",
+                  "x-nullable": true,
+                  "x-ms-visibility": "advanced"
                 },
                 "registryTypeId": {
                   "type": "integer",
@@ -1871,46 +1563,6 @@
                     "operationId": "GetRegistryType",
                     "value-path": "id",
                     "value-title": "name"
-                  }
-                },
-                "ciId": {
-                  "type": "integer",
-                  "format": "int32",
-                  "description": "CI ID",
-                  "title": "CI ID",
-                  "x-nullable": true,
-                  "x-ms-visibility": "advanced",
-                  "x-ms-dynamic-values": {
-                    "operationId": "GetCI",
-                    "value-path": "id",
-                    "value-title": "name",
-                    "parameters": {
-                      "itemType": {
-                        "parameter": "itemType"
-                      },
-                      "projectId": {
-                        "parameter": "projectId"
-                      },
-                      "serviceId": {
-                        "parameter": "serviceId"
-                      }
-                    }
-                  },
-                  "x-ms-dynamic-list": {
-                    "operationId": "GetCI",
-                    "itemValuePath": "id",
-                    "itemTitlePath": "name",
-                    "parameters": {
-                      "itemType": {
-                        "parameterReference": "requestBody/itemType"
-                      },
-                      "projectId": {
-                        "parameterReference": "requestBody/projectId"
-                      },
-                      "serviceId": {
-                        "parameterReference": "requestBody/serviceId"
-                      }
-                    }
                   }
                 },
                 "urgencyId": {
@@ -1937,74 +1589,6 @@
                     "operationId": "GetImpact",
                     "value-path": "id",
                     "value-title": "name"
-                  }
-                },
-                "providerId": {
-                  "type": "integer",
-                  "format": "int32",
-                  "description": "Provider ID",
-                  "title": "Provider ID",
-                  "x-nullable": true,
-                  "x-ms-visibility": "advanced",
-                  "x-ms-dynamic-values": {
-                    "operationId": "GetProviders",
-                    "value-path": "id",
-                    "value-title": "name",
-                    "parameters": {
-                      "projectId": {
-                        "parameter": "projectId"
-                      },
-                      "serviceId": {
-                        "parameter": "serviceId"
-                      }
-                    }
-                  },
-                  "x-ms-dynamic-list": {
-                    "operationId": "GetProviders",
-                    "itemValuePath": "id",
-                    "itemTitlePath": "name",
-                    "parameters": {
-                      "projectId": {
-                        "parameterReference": "requestBody/projectId"
-                      },
-                      "serviceId": {
-                        "parameterReference": "requestBody/serviceId"
-                      }
-                    }
-                  }
-                },
-                "unitId": {
-                  "type": "integer",
-                  "format": "int32",
-                  "description": "Organizational Area ID",
-                  "title": "Organizational Area ID",
-                  "x-nullable": true,
-                  "x-ms-visibility": "advanced",
-                  "x-ms-dynamic-values": {
-                    "operationId": "GetOrganizationalArea",
-                    "value-path": "id",
-                    "value-title": "name",
-                    "parameters": {
-                      "projectId": {
-                        "parameter": "projectId"
-                      },
-                      "serviceId": {
-                        "parameter": "serviceId"
-                      }
-                    }
-                  },
-                  "x-ms-dynamic-list": {
-                    "operationId": "GetOrganizationalArea",
-                    "itemValuePath": "id",
-                    "itemTitlePath": "name",
-                    "parameters": {
-                      "projectId": {
-                        "parameterReference": "requestBody/projectId"
-                      },
-                      "serviceId": {
-                        "parameterReference": "requestBody/serviceId"
-                      }
-                    }
                   }
                 },
                 "additionalFields": {
@@ -2120,32 +1704,6 @@
         "parameters": [
           {
             "$ref": "#/parameters/itemType"
-          },
-          {
-            "$ref": "#/parameters/serviceId"
-          }
-        ]
-      }
-    },
-    "/parameters/cis": {
-      "get": {
-        "responses": {
-          "200": {
-            "description": "OK",
-            "schema": {
-              "$ref": "#/definitions/propertyTicket_response"
-            }
-          }
-        },
-        "summary": "Item Configuration",
-        "operationId": "GetCI",
-        "x-ms-visibility": "internal",
-        "parameters": [
-          {
-            "$ref": "#/parameters/itemType"
-          },
-          {
-            "$ref": "#/parameters/projectId"
           },
           {
             "$ref": "#/parameters/serviceId"
