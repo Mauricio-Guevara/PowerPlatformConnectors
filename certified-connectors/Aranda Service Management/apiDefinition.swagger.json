@@ -1896,8 +1896,9 @@
                 },
                 "search": {
                   "type": "string",
-                  "description": "View an article by its title, keyword, or description",
+                  "description": "Search for an article by its title, keyword or description",
                   "title": "Search article",
+                  "minLength": 3,
                   "x-ms-visibility": "important"
                 },
                 "folderId": {
@@ -1948,6 +1949,58 @@
                 "search"
               ]
             }
+          }
+        ]
+      }
+    },
+    "/article/{articleId}/file/{fileId}": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "OK, Success",
+            "schema": {
+              "format": "binary",
+              "description": "The content of the file.",
+              "type": "string",
+              "x-ms-summary": "File Content"
+            },
+            "headers": {
+              "Content-Type": {
+                "description": "The mime type of the downloaded file.",
+                "type": "string"
+              },
+              "Content-Disposition": {
+                "description": "Content Disposition.",
+                "type": "string"
+              }
+            }
+          }
+        },
+        "summary": "Download article file",
+        "description": "Download files related to the article",
+        "operationId": "DownloadArticleFile",
+        "parameters": [
+          {
+            "name": "articleId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "type": "integer",
+            "x-ms-url-encoding": "single",
+            "x-ms-visibility": "important",
+            "x-ms-summary": "Article id",
+            "description": "Article id"
+          },
+          {
+            "name": "fileId",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "type": "integer",
+            "x-ms-url-encoding": "single",
+            "x-ms-visibility": "important",
+            "x-ms-summary": "File id",
+            "description": "Represents the id of the attachment"
           }
         ]
       }
@@ -2501,11 +2554,12 @@
       "name": "groupId",
       "in": "query",
       "required": true,
-      "type": "integer",
       "x-ms-visibility": "advanced",
       "x-ms-summary": "Group id",
       "description": "Group id",
-      "format": "int32"
+      "format": "int32",
+      "type": "integer"
+
     },
     "companyId": {
       "name": "companyId",
