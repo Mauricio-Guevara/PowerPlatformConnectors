@@ -1686,7 +1686,8 @@
                   "content": {
                     "type": "string",
                     "title": "Content",
-                    "description": "Content"
+                    "description": "Content",
+                    "format": "html"
                   },
                   "createdDate": {
                     "type": "string",
@@ -1959,18 +1960,43 @@
           "200": {
             "description": "OK, Success",
             "schema": {
-              "format": "binary",
-              "description": "The content of the file.",
-              "type": "string",
-              "x-ms-summary": "File Content"
+              "type": "object",
+              "title": "Attachment",
+              "properties": {
+                "name": {
+                  "title": "Name",
+                  "description": "Attachment name",
+                  "type": "string",
+                  "x-ms-summary": "Name"
+                },
+                "content": {
+                  "title": "File content",
+                  "format": "binary",
+                  "description": "The content of the attachment",
+                  "type": "string",
+                  "x-ms-summary": "File content"
+                },
+                "size": {
+                  "title": "Size",
+                  "description": "Size in bytes of the attachment",
+                  "type": "string",
+                  "x-ms-summary": "Size"
+                }
+              }
             },
             "headers": {
-              "Content-Type": {
-                "description": "The mime type of the downloaded file.",
-                "type": "string"
+              "x-resco-filename": {
+                "type": "string",
+                "description": "The name of the report file",
+                "x-ms-summary": "File name"
               },
               "Content-Disposition": {
-                "description": "Content Disposition.",
+                "type": "string",
+                "description": "Content Disposition."
+              },
+              "Content-Type": {
+                "description": "The mime type of the exported attachment",
+                "x-ms-summary": "Content Type",
                 "type": "string"
               }
             }
