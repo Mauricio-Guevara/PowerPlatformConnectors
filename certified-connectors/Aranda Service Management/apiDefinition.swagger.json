@@ -1659,24 +1659,6 @@
                       }
                     }
                   },
-                  "author": {
-                    "type": "object",
-                    "title": "Author",
-                    "description": "Author",
-                    "properties": {
-                      "id": {
-                        "type": "integer",
-                        "format": "int32",
-                        "title": "id",
-                        "description": "Author id"
-                      },
-                      "name": {
-                        "type": "string",
-                        "title": "name",
-                        "description": "Author name"
-                      }
-                    }
-                  },
                   "classId": {
                     "type": "integer",
                     "format": "int32",
@@ -1699,12 +1681,6 @@
                     "title": "Description",
                     "description": "Description"
                   },
-                  "hitTotal": {
-                    "type": "integer",
-                    "format": "int32",
-                    "title": "Hit total",
-                    "description": "Hit total"
-                  },
                   "id": {
                     "type": "integer",
                     "format": "int32",
@@ -1713,128 +1689,18 @@
                   },
                   "identifier": {
                     "type": "string",
-                    "title": "Identifier",
-                    "description": "Identifier"
-                  },
-                  "isFavorite": {
-                    "type": "boolean",
-                    "title": "Is favorite",
-                    "description": "Is favorite"
-                  },
-                  "isPublic": {
-                    "type": "boolean",
-                    "title": "Is public",
-                    "description": "Is public"
-                  },
-                  "isRatedByUser": {
-                    "type": "boolean",
-                    "title": "Is rated by user",
-                    "description": "Is rated by user"
+                    "title": "Article identifier",
+                    "description": "Article identifier"
                   },
                   "keyword": {
                     "type": "string",
                     "title": "Article keyword",
                     "description": "Article keyword"
                   },
-                  "modifiedDate": {
+                  "lastModifiedDate": {
                     "type": "string",
                     "title": "Modified date",
                     "description": "Modified date"
-                  },
-                  "modifierId": {
-                    "type": "integer",
-                    "format": "int32",
-                    "title": "Modifier id",
-                    "description": "Modifier Id"
-                  },
-                  "openedDate": {
-                    "type": "string",
-                    "title": "Registry date",
-                    "description": "Registry date"
-                  },
-                  "public": {
-                    "type": "integer",
-                    "format": "int32",
-                    "title": "Public",
-                    "description": "Public"
-                  },
-                  "ratingTotal": {
-                    "type": "integer",
-                    "format": "int32",
-                    "title": "Rating total",
-                    "description": "Rating total"
-                  },
-                  "reason": {
-                    "type": "object",
-                    "title": "Reason",
-                    "properties": {
-                      "id": {
-                        "type": "integer",
-                        "format": "int32",
-                        "title": "id",
-                        "description": "Reason id"
-                      },
-                      "name": {
-                        "type": "string",
-                        "title": "name",
-                        "description": "Reason name"
-                      }
-                    },
-                    "description": "Reason"
-                  },
-                  "responsible": {
-                    "type": "object",
-                    "properties": {
-                      "id": {
-                        "type": "integer",
-                        "format": "int32",
-                        "title": "id",
-                        "description": "Responsible id"
-                      },
-                      "name": {
-                        "type": "string",
-                        "title": "name",
-                        "description": "Responsible name"
-                      }
-                    },
-                    "title": "Responsible",
-                    "description": "Responsible"
-                  },
-                  "responsibleGroup": {
-                    "type": "object",
-                    "properties": {
-                      "id": {
-                        "type": "integer",
-                        "format": "int32",
-                        "title": "id",
-                        "description": "Responsible group id"
-                      },
-                      "name": {
-                        "type": "string",
-                        "title": "name",
-                        "description": "Responsible group name"
-                      }
-                    },
-                    "title": "Responsible group",
-                    "description": "Responsible group"
-                  },
-                  "state": {
-                    "type": "object",
-                    "properties": {
-                      "id": {
-                        "type": "integer",
-                        "format": "int32",
-                        "title": "id",
-                        "description": "State id"
-                      },
-                      "name": {
-                        "type": "string",
-                        "title": "name",
-                        "description": "State name"
-                      }
-                    },
-                    "title": "State",
-                    "description": "State"
                   },
                   "title": {
                     "type": "string",
@@ -1960,39 +1826,17 @@
           "200": {
             "description": "OK, Success",
             "schema": {
-              "type": "object",
-              "title": "Attachment",
-              "properties": {
-                "name": {
-                  "title": "Name",
-                  "description": "Attachment name",
-                  "type": "string",
-                  "x-ms-summary": "Name"
-                },
-                "content": {
-                  "title": "File content",
-                  "format": "binary",
-                  "description": "The content of the attachment",
-                  "type": "string",
-                  "x-ms-summary": "File content"
-                },
-                "size": {
-                  "title": "Size",
-                  "description": "Size in bytes of the attachment",
-                  "type": "string",
-                  "x-ms-summary": "Size"
-                }
-              }
+              "title": "File content",
+              "format": "binary",
+              "description": "The content of the attachment",
+              "type": "string",
+              "x-ms-summary": "File content"
             },
             "headers": {
-              "x-resco-filename": {
+              "x-filename": {
                 "type": "string",
                 "description": "The name of the report file",
                 "x-ms-summary": "File name"
-              },
-              "Content-Disposition": {
-                "type": "string",
-                "description": "Content Disposition."
               },
               "Content-Type": {
                 "description": "The mime type of the exported attachment",
