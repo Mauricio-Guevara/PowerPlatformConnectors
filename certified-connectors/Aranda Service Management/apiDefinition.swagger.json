@@ -1836,7 +1836,8 @@
               "x-filename": {
                 "type": "string",
                 "description": "The name of the report file",
-                "x-ms-summary": "File name"
+                "x-ms-summary": "File name",
+                "format": "uri"
               },
               "Content-Type": {
                 "description": "The mime type of the exported attachment",
@@ -1848,6 +1849,9 @@
         },
         "summary": "Download article file",
         "description": "Download files related to the article",
+        "consumes": [
+          "application/json"
+        ],
         "operationId": "DownloadArticleFile",
         "parameters": [
           {
