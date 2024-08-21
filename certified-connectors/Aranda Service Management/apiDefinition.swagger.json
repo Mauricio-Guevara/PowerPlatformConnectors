@@ -481,10 +481,10 @@
               "properties": {
                 "itemType": {
                   "type": "string",
-                  "description": "Case Type id",
-                  "title": "Case Type id",
+                  "description": "Select a case type or enter manually a case type name",
+                  "title": "Case Type",
                   "x-ms-visibility": "important",
-                  "x-ms-summary": "Case Type id",
+                  "x-ms-summary": "Case Type",
                   "enum": [
                     "Incidents",
                     "Problem",
@@ -496,10 +496,10 @@
                 "projectId": {
                   "type": "integer",
                   "format": "int32",
-                  "description": "Project id",
-                  "title": "Project id",
+                  "description": "Select a project or enter manually a project id",
+                  "title": "Project",
                   "x-ms-visibility": "important",
-                  "x-ms-summary": "Project id",
+                  "x-ms-summary": "Project",
                   "x-ms-dynamic-values": {
                     "operationId": "GetProject",
                     "value-path": "id",
@@ -509,10 +509,10 @@
                 "serviceId": {
                   "type": "integer",
                   "format": "int32",
-                  "description": "Service id",
-                  "title": "Service id",
+                  "description": "Select a service or enter manually a service id",
+                  "title": "Service",
                   "x-ms-visibility": "important",
-                  "x-ms-summary": "Service id",
+                  "x-ms-summary": "Service",
                   "x-ms-dynamic-values": {
                     "operationId": "GetService",
                     "value-path": "id",
@@ -543,10 +543,10 @@
                 "categoryId": {
                   "type": "integer",
                   "format": "int32",
-                  "description": "Category id",
-                  "title": "Category id",
+                  "description": "Select a category or enter manually a category id",
+                  "title": "Category",
                   "x-ms-visibility": "important",
-                  "x-ms-summary": "Category id",
+                  "x-ms-summary": "Category",
                   "x-ms-dynamic-values": {
                     "operationId": "GetCategory",
                     "value-path": "id",
@@ -589,10 +589,11 @@
                 "reasonId": {
                   "type": "integer",
                   "format": "int32",
-                  "description": "Reason id",
-                  "title": "Reason id",
+                  "description": "Select a reason or enter manually a reason id",
+                  "title": "Reason",
+                  "x-ms-summary": "Reason",
                   "x-nullable": true,
-                  "x-ms-visibility": "advanced",
+                  "x-ms-visibility": "important",
                   "x-ms-dynamic-values": {
                     "operationId": "GetReason",
                     "value-path": "id",
@@ -634,10 +635,11 @@
                 "groupId": {
                   "type": "integer",
                   "format": "int32",
-                  "description": "Group id",
-                  "title": "Group id",
+                  "description": "Select a group or enter manually a group id",
+                  "title": "Group",
+                  "x-ms-summary": "Group",
                   "x-nullable": true,
-                  "x-ms-visibility": "advanced",
+                  "x-ms-visibility": "important",
                   "x-ms-dynamic-values": {
                     "operationId": "GetGroup",
                     "value-path": "id",
@@ -678,10 +680,10 @@
                 "responsibleId": {
                   "type": "integer",
                   "format": "int32",
-                  "description": "Responsible id",
-                  "title": "Responsible id",
+                  "description": "Select a responsible or enter manually a responsible id",
+                  "title": "Responsible",
                   "x-nullable": true,
-                  "x-ms-visibility": "advanced",
+                  "x-ms-visibility": "important",
                   "x-ms-dynamic-values": {
                     "operationId": "GetResponsible",
                     "value-path": "id",
@@ -709,93 +711,14 @@
                     }
                   }
                 },
-                "applicantId": {
-                  "type": "integer",
-                  "format": "int32",
-                  "description": "Applicant id",
-                  "title": "Applicant id",
-                  "x-nullable": true,
-                  "x-ms-visibility": "advanced",
-                  "x-ms-dynamic-values": {
-                    "operationId": "GetApplicant",
-                    "value-path": "id",
-                    "value-title": "name",
-                    "parameters": {
-                      "itemType": {
-                        "parameter": "itemType"
-                      },
-                      "projectId": {
-                        "parameter": "projectId"
-                      },
-                      "serviceId": {
-                        "parameter": "serviceId"
-                      }
-                    }
-                  },
-                  "x-ms-dynamic-list": {
-                    "operationId": "GetApplicant",
-                    "itemValuePath": "id",
-                    "itemTitlePath": "name",
-                    "parameters": {
-                      "itemType": {
-                        "parameterReference": "requestBody/itemType"
-                      },
-                      "serviceId": {
-                        "parameterReference": "requestBody/serviceId"
-                      },
-                      "projectId": {
-                        "parameterReference": "requestBody/projectId"
-                      }
-                    }
-                  }
-                },
-                "customerId": {
-                  "type": "integer",
-                  "format": "int32",
-                  "description": "Client",
-                  "title": "Client",
-                  "x-nullable": true,
-                  "x-ms-visibility": "advanced",
-                  "x-ms-dynamic-values": {
-                    "operationId": "GetClient",
-                    "value-path": "id",
-                    "value-title": "name",
-                    "parameters": {
-                      "itemType": {
-                        "parameter": "itemType"
-                      },
-                      "projectId": {
-                        "parameter": "projectId"
-                      },
-                      "serviceId": {
-                        "parameter": "serviceId"
-                      }
-                    }
-                  },
-                  "x-ms-dynamic-list": {
-                    "operationId": "GetClient",
-                    "itemValuePath": "id",
-                    "itemTitlePath": "name",
-                    "parameters": {
-                      "itemType": {
-                        "parameterReference": "requestBody/itemType"
-                      },
-                      "projectId": {
-                        "parameterReference": "requestBody/projectId"
-                      },
-                      "serviceId": {
-                        "parameterReference": "requestBody/serviceId"
-                      }
-                    }
-                  }
-                },
                 "companyId": {
                   "type": "integer",
                   "format": "int32",
-                  "description": "Company id",
-                  "title": "Company id",
+                  "description": "Select a company or enter manually a company id",
+                  "title": "Company",
+                  "x-ms-summary": "Company",
                   "x-nullable": true,
-                  "x-ms-visibility": "advanced",
+                  "x-ms-visibility": "important",
                   "x-ms-dynamic-values": {
                     "operationId": "GetCompanies",
                     "value-path": "id",
@@ -828,22 +751,14 @@
                       }
                     }
                   }
-                },
-                "ciId": {
-                  "type": "integer",
-                  "format": "int32",
-                  "description": "CI id",
-                  "title": "CI id",
-                  "x-nullable": true,
-                  "x-ms-visibility": "advanced"
                 },
                 "providerId": {
                   "type": "integer",
                   "format": "int32",
-                  "description": "Provider id",
-                  "title": "Provider id",
+                  "description": "Select a provider or enter manually a provider id",
+                  "title": "Provider",
                   "x-nullable": true,
-                  "x-ms-visibility": "advanced",
+                  "x-ms-visibility": "important",
                   "x-ms-dynamic-values": {
                     "operationId": "GetProviders",
                     "value-path": "id",
@@ -874,10 +789,10 @@
                 "unitId": {
                   "type": "integer",
                   "format": "int32",
-                  "description": "Organizational Area id",
-                  "title": "Organizational Area id",
+                  "description": "Select a organizational area or enter manually a organizational area id",
+                  "title": "Organizational area",
                   "x-nullable": true,
-                  "x-ms-visibility": "advanced",
+                  "x-ms-visibility": "important",
                   "x-ms-dynamic-values": {
                     "operationId": "GetOrganizationalArea",
                     "value-path": "id",
@@ -905,11 +820,35 @@
                     }
                   }
                 },
+                "applicantId": {
+                  "type": "integer",
+                  "format": "int32",
+                  "description": "Applicant id",
+                  "title": "Applicant id",
+                  "x-nullable": true,
+                  "x-ms-visibility": "advanced"
+                },
+                "customerId": {
+                  "type": "integer",
+                  "format": "int32",
+                  "description": "Client id",
+                  "title": "Client id",
+                  "x-nullable": true,
+                  "x-ms-visibility": "advanced"
+                },
+                "ciId": {
+                  "type": "integer",
+                  "format": "int32",
+                  "description": "CI id",
+                  "title": "CI id",
+                  "x-nullable": true,
+                  "x-ms-visibility": "advanced"
+                },
                 "registryTypeId": {
                   "type": "integer",
                   "format": "int32",
-                  "description": "Registry type id",
-                  "title": "Registry type id",
+                  "description": "Select a registry type or enter manually a registry type id",
+                  "title": "Registry type",
                   "x-nullable": true,
                   "x-ms-visibility": "advanced",
                   "x-ms-dynamic-values": {
@@ -921,8 +860,8 @@
                 "urgencyId": {
                   "type": "integer",
                   "format": "int32",
-                  "description": "Urgency id",
-                  "title": "Urgency id",
+                  "description": "Select a urgency or enter manually a urgency id",
+                  "title": "Urgency",
                   "x-nullable": true,
                   "x-ms-visibility": "advanced",
                   "x-ms-dynamic-values": {
@@ -934,8 +873,8 @@
                 "impactId": {
                   "type": "integer",
                   "format": "int32",
-                  "description": "Impact id",
-                  "title": "Impact id",
+                  "description": "Select a impact or enter manually a impact id",
+                  "title": "Impact",
                   "x-nullable": true,
                   "x-ms-visibility": "advanced",
                   "x-ms-dynamic-values": {
@@ -946,7 +885,7 @@
                 },
                 "additionalFields": {
                   "type": "array",
-                  "title": "Additional Fields",
+                  "title": "Additional fields",
                   "items": {
                     "type": "object",
                     "properties": {
@@ -1026,14 +965,14 @@
                 },
                 "itemTypeName": {
                   "type": "string",
-                  "title": "Case Type",
-                  "description": "Case Type name"
+                  "title": "Case type",
+                  "description": "Case type name"
                 },
                 "itemTypeId": {
                   "type": "integer",
                   "format": "int32",
-                  "title": "Case Type id",
-                  "description": "Case Type id"
+                  "title": "Case type id",
+                  "description": "Case type id"
                 },
                 "serviceId": {
                   "type": "integer",
@@ -1242,12 +1181,12 @@
                 "unitId": {
                   "type": "integer",
                   "format": "int32",
-                  "title": "Organizational Area id",
-                  "description": "Organizational Area id"
+                  "title": "Organizational area id",
+                  "description": "Organizational area id"
                 },
                 "unitName": {
                   "type": "string",
-                  "title": "Organizational Area",
+                  "title": "Organizational area",
                   "description": "Organizational area name"
                 },
                 "olaId": {
@@ -1339,8 +1278,8 @@
                 },
                 "additionalFields": {
                   "type": "array",
-                  "description": "Additional Fields",
-                  "title": "Additional Fields",
+                  "description": "Additional fields",
+                  "title": "Additional fields",
                   "items": {
                     "type": "object",
                     "description": "Additional Field",
@@ -1478,7 +1417,7 @@
                   "description": "Status id",
                   "title": "Status id",
                   "x-nullable": true,
-                  "x-ms-visibility": "advanced"
+                  "x-ms-visibility": "important"
                 },
                 "reasonId": {
                   "type": "integer",
@@ -1547,15 +1486,15 @@
                 "unitId": {
                   "type": "integer",
                   "format": "int32",
-                  "description": "Organizational Area id",
-                  "title": "Organizational Area id",
+                  "description": "Organizational area id",
+                  "title": "Organizational area id",
                   "x-nullable": true,
                   "x-ms-visibility": "advanced"
                 },
                 "registryTypeId": {
                   "type": "integer",
                   "format": "int32",
-                  "description": "Registry type id",
+                  "description": "Select a registry type or enter manually a registry type id",
                   "title": "Registry type id",
                   "x-nullable": true,
                   "x-ms-visibility": "advanced",
@@ -1568,7 +1507,7 @@
                 "urgencyId": {
                   "type": "integer",
                   "format": "int32",
-                  "description": "Urgency id",
+                  "description": "Select a urgency or enter manually a urgency id",
                   "title": "Urgency id",
                   "x-nullable": true,
                   "x-ms-visibility": "advanced",
@@ -1581,7 +1520,7 @@
                 "impactId": {
                   "type": "integer",
                   "format": "int32",
-                  "description": "Impact id",
+                  "description": "Select a urgency or enter manually a impact id",
                   "title": "Impact id",
                   "x-nullable": true,
                   "x-ms-visibility": "advanced",
@@ -1593,15 +1532,15 @@
                 },
                 "additionalFields": {
                   "type": "array",
-                  "title": "Additional Fields",
+                  "title": "Additional fields",
                   "items": {
                     "type": "object",
                     "properties": {
                       "fieldId": {
                         "type": "string",
-                        "title": "Field Id",
+                        "title": "Field id",
                         "x-nullable": false,
-                        "description": "Field Id"
+                        "description": "Field id"
                       },
                       "values": {
                         "type": "array",
@@ -2109,69 +2048,7 @@
           }
         ]
       }
-    },
-    "/parameters/applicant": {
-      "get": {
-        "responses": {
-          "200": {
-            "description": "OK",
-            "schema": {
-              "$ref": "#/definitions/propertyTicket_response"
-            }
-          }
-        },
-        "summary": "Applicant",
-        "operationId": "GetApplicant",
-        "x-ms-visibility": "internal",
-        "parameters": [
-          {
-            "$ref": "#/parameters/itemType"
-          },
-          {
-            "$ref": "#/parameters/projectId"
-          },
-          {
-            "$ref": "#/parameters/serviceId"
-          }
-        ]
-      }
-    },
-    "/parameters/client": {
-      "get": {
-        "responses": {
-          "200": {
-            "description": "OK",
-            "schema": {
-              "$ref": "#/definitions/propertyTicket_response"
-            }
-          }
-        },
-        "summary": "Client",
-        "operationId": "GetClient",
-        "x-ms-visibility": "internal",
-        "parameters": [
-          {
-            "$ref": "#/parameters/itemType"
-          },
-          {
-            "$ref": "#/parameters/projectId"
-          },
-          {
-            "$ref": "#/parameters/serviceId"
-          },
-          {
-            "name": "companyId",
-            "in": "query",
-            "required": false,
-            "x-nullable": true,
-            "type": "integer",
-            "x-ms-visibility": "advanced",
-            "x-ms-summary": "Company id",
-            "description": "Company id"
-          }
-        ]
-      }
-    },
+    }, 
     "/parameters/companies": {
       "get": {
         "responses": {
@@ -2431,9 +2308,7 @@
       "x-ms-visibility": "advanced",
       "x-ms-summary": "Group id",
       "description": "Group id",
-      "format": "int32",
-      "type": "integer"
-
+      "format": "int32"
     },
     "companyId": {
       "name": "companyId",
