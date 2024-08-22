@@ -1,6 +1,6 @@
 {
-  "connectorId": "shared_aranda-20service-20management-5f1cfa17195e79292-41ae8236a43132e8",
-  "environment": "74e71859-fa1d-ec7b-983d-0a1e1232fa05",
+  "connectorId": "shared_aranda-20service-20management-5f722d9d35a9d96c7-8fe13a618b2242b5",
+  "environment": "73a4e6b1-6145-ecac-8af3-b0aad2602d04",
   "apiProperties": "D:\\ARANDA\\ADAPTER_ASMS\\ForkMicrosoft\\PowerPlatformConnectors\\certified-connectors\\Aranda Service Management\\apiProperties.json",
   "apiDefinition": "D:\\ARANDA\\ADAPTER_ASMS\\ForkMicrosoft\\PowerPlatformConnectors\\certified-connectors\\Aranda Service Management\\apiDefinition.swagger.json",
   "icon": "D:\\ARANDA\\ADAPTER_ASMS\\ForkMicrosoft\\PowerPlatformConnectors\\certified-connectors\\Aranda Service Management\\icon.png",

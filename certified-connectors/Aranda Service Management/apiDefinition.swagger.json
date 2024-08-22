@@ -479,6 +479,18 @@
             "schema": {
               "type": "object",
               "properties": {
+                "subject": {
+                  "type": "string",
+                  "description": "Subject",
+                  "title": "Subject",
+                  "x-ms-visibility": "important"
+                },
+                "description": {
+                  "type": "string",
+                  "description": "Detailed description of the case",
+                  "title": "Description",
+                  "x-ms-visibility": "important"
+                },
                 "itemType": {
                   "type": "string",
                   "description": "Select a case type or enter manually a case type name",
@@ -573,18 +585,6 @@
                       }
                     }
                   }
-                },
-                "subject": {
-                  "type": "string",
-                  "description": "Subject",
-                  "title": "Subject",
-                  "x-ms-visibility": "important"
-                },
-                "description": {
-                  "type": "string",
-                  "description": "Detailed description of the case",
-                  "title": "Description",
-                  "x-ms-visibility": "important"
                 },
                 "reasonId": {
                   "type": "integer",
@@ -1372,24 +1372,6 @@
             "schema": {
               "type": "object",
               "properties": {
-                "serviceId": {
-                  "type": "integer",
-                  "format": "int32",
-                  "description": "Service id",
-                  "title": "Service id",
-                  "x-nullable": true,
-                  "x-ms-visibility": "important",
-                  "x-ms-summary": "Service id"
-                },
-                "categoryId": {
-                  "type": "integer",
-                  "format": "int32",
-                  "description": "Category id",
-                  "title": "Category id",
-                  "x-nullable": true,
-                  "x-ms-visibility": "important",
-                  "x-ms-summary": "Category id"
-                },
                 "subject": {
                   "type": "string",
                   "description": "Subject",
@@ -1410,6 +1392,24 @@
                   "title": "Solution",
                   "x-nullable": true,
                   "x-ms-visibility": "important"
+                },
+                "serviceId": {
+                  "type": "integer",
+                  "format": "int32",
+                  "description": "Service id",
+                  "title": "Service id",
+                  "x-nullable": true,
+                  "x-ms-visibility": "important",
+                  "x-ms-summary": "Service id"
+                },
+                "categoryId": {
+                  "type": "integer",
+                  "format": "int32",
+                  "description": "Category id",
+                  "title": "Category id",
+                  "x-nullable": true,
+                  "x-ms-visibility": "important",
+                  "x-ms-summary": "Category id"
                 },
                 "stateId": {
                   "type": "integer",
@@ -2305,6 +2305,7 @@
       "name": "groupId",
       "in": "query",
       "required": true,
+      "type": "integer",
       "x-ms-visibility": "advanced",
       "x-ms-summary": "Group id",
       "description": "Group id",
