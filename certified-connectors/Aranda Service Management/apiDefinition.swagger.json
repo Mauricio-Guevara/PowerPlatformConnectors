@@ -1579,11 +1579,6 @@
                     "items": {
                       "type": "object",
                       "properties": {
-                        "download": {
-                          "type": "string",
-                          "title": "download",
-                          "description": "Download attachment"
-                        },
                         "id": {
                           "type": "integer",
                           "title": "id",
@@ -1774,13 +1769,17 @@
             "headers": {
               "x-filename": {
                 "type": "string",
-                "description": "The name of the report file",
-                "x-ms-summary": "File name",
+                "description": "The name of the attachment encoded in UTF-8",
+                "x-ms-summary": "File name encoded",
                 "format": "uri"
               },
               "Content-Type": {
                 "description": "The mime type of the exported attachment",
                 "x-ms-summary": "Content Type",
+                "type": "string"
+              },
+              "Content-Disposition": {
+                "description": "Content Disposition.",
                 "type": "string"
               }
             }
@@ -1812,7 +1811,7 @@
             "type": "integer",
             "x-ms-url-encoding": "single",
             "x-ms-visibility": "important",
-            "x-ms-summary": "File id",
+            "x-ms-summary": "Attachment id",
             "description": "Represents the id of the attachment"
           }
         ]
