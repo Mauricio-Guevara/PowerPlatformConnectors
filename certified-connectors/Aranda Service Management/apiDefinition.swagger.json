@@ -1686,7 +1686,7 @@
                 "projectId": {
                   "type": "integer",
                   "format": "int32",
-                  "description": "Project id",
+                  "description": "Select a project or enter manually a project id",
                   "title": "Project",
                   "x-ms-visibility": "important",
                   "x-ms-dynamic-values": {
@@ -1705,7 +1705,7 @@
                 "folderId": {
                   "type": "integer",
                   "format": "int32",
-                  "description": "Category id",
+                  "description": "Select a category or enter manually a category id",
                   "title": "Category",
                   "x-nullable": true,
                   "x-ms-visibility": "advanced",
@@ -1734,7 +1734,7 @@
                 "typeId": {
                   "type": "integer",
                   "format": "int32",
-                  "description": "Type id",
+                  "description": "Select a type or enter manually a type id",
                   "title": "Type",
                   "x-nullable": true,
                   "x-ms-visibility": "advanced",
