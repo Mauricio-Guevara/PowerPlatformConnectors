@@ -1455,7 +1455,7 @@
                   "type": "integer",
                   "format": "int32",
                   "description": "Client",
-                  "title": "Client",
+                  "title": "Client id",
                   "x-nullable": true,
                   "x-ms-visibility": "advanced"
                 },
@@ -1495,7 +1495,7 @@
                   "type": "integer",
                   "format": "int32",
                   "description": "Select a registry type or enter manually a registry type id",
-                  "title": "Registry type id",
+                  "title": "Registry type",
                   "x-nullable": true,
                   "x-ms-visibility": "advanced",
                   "x-ms-dynamic-values": {
@@ -1508,7 +1508,7 @@
                   "type": "integer",
                   "format": "int32",
                   "description": "Select a urgency or enter manually a urgency id",
-                  "title": "Urgency id",
+                  "title": "Urgency",
                   "x-nullable": true,
                   "x-ms-visibility": "advanced",
                   "x-ms-dynamic-values": {
@@ -1521,7 +1521,7 @@
                   "type": "integer",
                   "format": "int32",
                   "description": "Select a urgency or enter manually a impact id",
-                  "title": "Impact id",
+                  "title": "Impact",
                   "x-nullable": true,
                   "x-ms-visibility": "advanced",
                   "x-ms-dynamic-values": {
