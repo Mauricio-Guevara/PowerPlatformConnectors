@@ -1785,8 +1785,8 @@
             }
           }
         },
-        "summary": "Download article file",
-        "description": "Download files related to the article",
+        "summary": "Download the article attachment",
+        "description": "Download attachment related to the article",
         "consumes": [
           "application/json"
         ],
