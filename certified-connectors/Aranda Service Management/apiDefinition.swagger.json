@@ -1669,8 +1669,8 @@
             }
           }
         },
-        "summary": "Get articles",
-        "description": "Gets the metadata of the articles from ASMS.",
+        "summary": "Search articles",
+        "description": "Retrieves a list of articles based on the search criteria added in the query.",
         "consumes": [
           "application/json"
         ],
