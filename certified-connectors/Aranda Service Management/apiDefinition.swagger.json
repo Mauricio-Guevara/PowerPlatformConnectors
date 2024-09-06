@@ -1,10 +1,10 @@
 {
   "swagger": "2.0",
   "info": {
-    "x-ms-deployment-version": "1.0.0",
+    "x-ms-deployment-version": "1.0.3",
     "title": "Aranda Service Management",
     "description": "Boost your company's productivity and transform your users' experience with Aranda Service Management Suite, the multi-tenant solution that allows you to manage, integrate, and automate business processes and services.",
-    "version": "2.0",
+    "version": "2.3",
     "contact": {
       "name": "Aranda Software",
       "url": "https://arandasoft.com/",
@@ -1226,14 +1226,14 @@
                     "title": "Additional Field",
                     "properties": {
                       "fieldId": {
-                        "title": "Field Id",
+                        "title": "Id",
                         "type": "integer",
                         "format": "int32",
                         "description": "Field Id"
                       },
                       "nameField": {
                         "type": "string",
-                        "title": "Name field",
+                        "title": "Name",
                         "description": "Name field"
                       },
                       "valueDetails": {
@@ -1243,7 +1243,7 @@
                         "x-nullable": true,
                         "properties": {
                           "id": {
-                            "title": "Value Id",
+                            "title": "Id",
                             "type": "integer",
                             "format": "int32",
                             "x-nullable": true,
@@ -1251,7 +1251,7 @@
                           },
                           "value": {
                             "type": "string",
-                            "title": "Field value",
+                            "title": "Value",
                             "description": "Field value"
                           }
                         }
@@ -1541,23 +1541,26 @@
                   },
                   "detail": {
                     "type": "array",
-                    "description": "Detail of the modification",
+                    "title": "Detail",
+                    "description": "Detail of the modifications",
                     "items": {
                       "type": "object",
                       "properties": {
                         "fieldName": {
                           "type": "string",
-                          "title": "Field name",
+                          "title": "Modified field name",
                           "description": "Modified field name"
                         },
                         "newValue": {
                           "type": "string",
                           "title": "New value",
+                          "format": "html",
                           "description": "Represents the new value of the property"
                         },
                         "oldValue": {
                           "type": "string",
                           "title": "Old value",
+                          "format": "html",
                           "description": "Value that has been modified"
                         },
                         "relatedItemId": {
@@ -1991,21 +1994,6 @@
         ]
       }
     },
-    "/connection": {
-      "get": {
-        "responses": {
-          "200": {
-            "description": "OK",
-            "schema": {}
-          }
-        },
-        "summary": "itemType",
-        "description": "Validate the connection with ASMS",
-        "operationId": "TestConnection",
-        "x-ms-visibility": "internal",
-        "parameters": []
-      }
-    },
     "/article/folders": {
       "get": {
         "responses": {
@@ -2038,6 +2026,21 @@
         },
         "summary": "Urgency",
         "operationId": "GetTypeArticle",
+        "x-ms-visibility": "internal",
+        "parameters": []
+      }
+    },
+    "/connection": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {}
+          }
+        },
+        "summary": "itemType",
+        "description": "Validate the connection with ASMS",
+        "operationId": "TestConnection",
         "x-ms-visibility": "internal",
         "parameters": []
       }
