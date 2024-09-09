@@ -1,10 +1,10 @@
 {
   "swagger": "2.0",
   "info": {
-    "x-ms-deployment-version": "1.0.3",
+    "x-ms-deployment-version": "1.0.7",
     "title": "Aranda Service Management",
     "description": "Boost your company's productivity and transform your users' experience with Aranda Service Management Suite, the multi-tenant solution that allows you to manage, integrate, and automate business processes and services.",
-    "version": "2.3",
+    "version": "2.7",
     "contact": {
       "name": "Aranda Software",
       "url": "https://arandasoft.com/",
@@ -1198,6 +1198,7 @@
                 "attachments": {
                   "title": "Attachments",
                   "description": "Attachments related to the case",
+                  "x-nullable": true,
                   "type": "array",
                   "items": {
                     "type": "object",
@@ -1223,23 +1224,23 @@
                   "items": {
                     "type": "object",
                     "description": "Additional Field",
-                    "title": "Additional Field",
+                    "title": "Content",
                     "properties": {
                       "fieldId": {
-                        "title": "Id",
+                        "title": "Field id",
                         "type": "integer",
                         "format": "int32",
-                        "description": "Field Id"
+                        "description": "Field id"
                       },
                       "nameField": {
                         "type": "string",
-                        "title": "Name",
-                        "description": "Name field"
+                        "title": "Field name",
+                        "description": "Field name"
                       },
                       "valueDetails": {
                         "type": "object",
-                        "title": "Values Details",
-                        "description": "Description of values ​​for list or catalog type fields",
+                        "x-ms-summary": "Details of values",
+                        "description": "Specification for list or catalog type fields",
                         "x-nullable": true,
                         "properties": {
                           "id": {
@@ -1247,18 +1248,18 @@
                             "type": "integer",
                             "format": "int32",
                             "x-nullable": true,
-                            "description": "Value Id"
+                            "description": "Specification for list or catalog type fields: Id"
                           },
                           "value": {
                             "type": "string",
                             "title": "Value",
-                            "description": "Field value"
+                            "description": "Specification for list or catalog type fields: Value"
                           }
                         }
                       },
                       "values": {
                         "type": "array",
-                        "title": "Values",
+                        "title": "Field values",
                         "items": {
                           "type": "string"
                         },
@@ -1541,7 +1542,7 @@
                   },
                   "detail": {
                     "type": "array",
-                    "title": "Detail",
+                    "title": "Content",
                     "description": "Detail of the modifications",
                     "items": {
                       "type": "object",
@@ -1555,17 +1556,20 @@
                           "type": "string",
                           "title": "New value",
                           "format": "html",
+                          "x-nullable": true,
                           "description": "Represents the new value of the property"
                         },
                         "oldValue": {
                           "type": "string",
                           "title": "Old value",
                           "format": "html",
+                          "x-nullable": true,
                           "description": "Value that has been modified"
                         },
                         "relatedItemId": {
                           "type": "string",
                           "title": "Related item id",
+                          "x-nullable": true,
                           "description": "Represents the identifier when a Relation is added. (only for 'AddedRelated' Action key)"
                         }
                       }
@@ -1587,20 +1591,18 @@
             "$ref": "#/parameters/ticketIdPath"
           },
           {
-            "name": "addNotePublic",
+            "name": "addNote",
             "in": "query",
             "required": false,
-            "type": "boolean",
-            "x-ms-summary": "Include notes public",
-            "description": "Allows you to include public notes"
-          },
-          {
-            "name": "addNotePrivate",
-            "in": "query",
-            "required": false,
-            "type": "boolean",
-            "x-ms-summary": "Include notes private",
-            "description": "Allows you to include public notes"
+            "type": "string",
+            "enum": [
+              "None",
+              "Public",
+              "Private",
+              "All"
+            ],
+            "x-ms-summary": "Include notes",
+            "description": "Select the type of note you want to add."
           }
         ]
       }
@@ -2505,7 +2507,7 @@
       "x-ms-url-encoding": "single",
       "x-ms-visibility": "important",
       "x-ms-summary": "Id by project",
-      "description": "Code of the record for which metadata will be attached."
+      "description": "Code of the record"
     }
   },
   "responses": {},
