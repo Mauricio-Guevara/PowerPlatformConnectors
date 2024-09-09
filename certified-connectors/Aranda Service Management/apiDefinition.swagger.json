@@ -1219,32 +1219,38 @@
                 },
                 "additionalFields": {
                   "type": "array",
-                  "description": "Additional fields",
-                  "title": "Additional fields",
+                  "description": "Additional field",
+                  "title": "Additional field",
                   "items": {
                     "type": "object",
-                    "description": "Additional Field",
-                    "title": "Content",
                     "properties": {
                       "fieldId": {
-                        "title": "Field id",
+                        "title": "id",
                         "type": "integer",
                         "format": "int32",
-                        "description": "Field id"
+                        "description": "field id"
                       },
                       "nameField": {
                         "type": "string",
-                        "title": "Field name",
-                        "description": "Field name"
+                        "title": "name",
+                        "description": "field name"
+                      },
+                      "values": {
+                        "type": "array",
+                        "title": "values",
+                        "items": {
+                          "type": "string"
+                        },
+                        "description": "Additional field values"
                       },
                       "valueDetails": {
                         "type": "object",
-                        "x-ms-summary": "Details of values",
+                        "x-ms-summary": "details",
                         "description": "Specification for list or catalog type fields",
                         "x-nullable": true,
                         "properties": {
                           "id": {
-                            "title": "Id",
+                            "title": ": ID",
                             "type": "integer",
                             "format": "int32",
                             "x-nullable": true,
@@ -1252,18 +1258,10 @@
                           },
                           "value": {
                             "type": "string",
-                            "title": "Value",
+                            "title": ": Value",
                             "description": "Specification for list or catalog type fields: Value"
                           }
                         }
-                      },
-                      "values": {
-                        "type": "array",
-                        "title": "Field values",
-                        "items": {
-                          "type": "string"
-                        },
-                        "description": "Additional field values"
                       }
                     }
                   }
@@ -1542,33 +1540,33 @@
                   },
                   "detail": {
                     "type": "array",
-                    "title": "Content",
+                    "title": "History",
                     "description": "Detail of the modifications",
                     "items": {
                       "type": "object",
                       "properties": {
                         "fieldName": {
                           "type": "string",
-                          "title": "Modified field name",
+                          "title": ": Modified field name",
                           "description": "Modified field name"
                         },
                         "newValue": {
                           "type": "string",
-                          "title": "New value",
+                          "title": ": New value",
                           "format": "html",
                           "x-nullable": true,
                           "description": "Represents the new value of the property"
                         },
                         "oldValue": {
                           "type": "string",
-                          "title": "Old value",
+                          "title": ": Old value",
                           "format": "html",
                           "x-nullable": true,
                           "description": "Value that has been modified"
                         },
                         "relatedItemId": {
                           "type": "string",
-                          "title": "Related item id",
+                          "title": ": Related item id",
                           "x-nullable": true,
                           "description": "Represents the identifier when a Relation is added. (only for 'AddedRelated' Action key)"
                         }
@@ -1678,10 +1676,12 @@
               },
               "Content-Type": {
                 "description": "The mime type of the exported attachment",
+                "x-ms-summary": "Content Type",
                 "type": "string"
               },
               "Content-Disposition": {
                 "description": "Content Disposition.",
+                "x-ms-summary": "Content Disposition",
                 "type": "string"
               }
             }
@@ -1958,7 +1958,8 @@
                 "type": "string"
               },
               "Content-Disposition": {
-                "description": "Content Disposition.",
+                "description": "ContentDisposition.",
+                "x-ms-summary": "Content Disposition",
                 "type": "string"
               }
             }
