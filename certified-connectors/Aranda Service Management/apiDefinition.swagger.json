@@ -1,10 +1,10 @@
 {
   "swagger": "2.0",
   "info": {
-    "x-ms-deployment-version": "1.0.7",
+    "x-ms-deployment-version": "1.0.8",
     "title": "Aranda Service Management",
     "description": "Boost your company's productivity and transform your users' experience with Aranda Service Management Suite, the multi-tenant solution that allows you to manage, integrate, and automate business processes and services.",
-    "version": "2.7",
+    "version": "2.8",
     "contact": {
       "name": "Aranda Software",
       "url": "https://arandasoft.com/",
@@ -1751,32 +1751,15 @@
               "items": {
                 "type": "object",
                 "properties": {
-                  "attachments": {
-                    "title": "Attachments article",
-                    "description": "Attachments related to the article",
-                    "type": "array",
-                    "items": {
-                      "type": "object",
-                      "properties": {
-                        "id": {
-                          "type": "integer",
-                          "title": "id",
-                          "format": "int32",
-                          "description": "Attachment id"
-                        },
-                        "name": {
-                          "type": "string",
-                          "title": "name",
-                          "description": "Attachment name"
-                        }
-                      }
-                    }
+                  "title": {
+                    "type": "string",
+                    "title": "Title",
+                    "description": "Title"
                   },
-                  "classId": {
-                    "type": "integer",
-                    "format": "int32",
-                    "title": "Class id",
-                    "description": "Class id"
+                  "description": {
+                    "type": "string",
+                    "title": "Description",
+                    "description": "Description"
                   },
                   "content": {
                     "type": "string",
@@ -1784,41 +1767,37 @@
                     "description": "Content",
                     "format": "html"
                   },
-                  "createdDate": {
+                  "keyword": {
                     "type": "string",
-                    "title": "Created date",
-                    "description": "Created date"
-                  },
-                  "description": {
-                    "type": "string",
-                    "title": "Description",
-                    "description": "Description"
-                  },
-                  "id": {
-                    "type": "integer",
-                    "format": "int32",
-                    "title": "Article id",
-                    "description": "Article id"
+                    "title": "Article keyword",
+                    "description": "Article keyword"
                   },
                   "identifier": {
                     "type": "string",
                     "title": "Article identifier",
                     "description": "Article identifier"
                   },
-                  "keyword": {
+                  "createdDate": {
                     "type": "string",
-                    "title": "Article keyword",
-                    "description": "Article keyword"
+                    "title": "Created date",
+                    "description": "Created date"
                   },
                   "lastModifiedDate": {
                     "type": "string",
                     "title": "Modified date",
                     "description": "Modified date"
                   },
-                  "title": {
-                    "type": "string",
-                    "title": "Title",
-                    "description": "Title"
+                  "classId": {
+                    "type": "integer",
+                    "format": "int32",
+                    "title": "Class id",
+                    "description": "Class id"
+                  },
+                  "id": {
+                    "type": "integer",
+                    "format": "int32",
+                    "title": "Article id",
+                    "description": "System id for the record"
                   },
                   "type": {
                     "type": "object",
@@ -1842,6 +1821,27 @@
                     "type": "string",
                     "title": "URL",
                     "description": "URL"
+                  },
+                  "attachments": {
+                    "title": "Attachments article",
+                    "description": "Attachments related to the article",
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "integer",
+                          "title": "id",
+                          "format": "int32",
+                          "description": "Attachment id"
+                        },
+                        "name": {
+                          "type": "string",
+                          "title": "name",
+                          "description": "Attachment name"
+                        }
+                      }
+                    }
                   }
                 }
               }
