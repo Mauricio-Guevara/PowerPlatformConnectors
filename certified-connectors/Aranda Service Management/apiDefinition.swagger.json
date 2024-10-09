@@ -12,14 +12,14 @@
     }
   },
   "host": "adaptaerasms.azurewebsites.net",
-  "basePath": "/adapter/api/asms",
+  "basePath": "/adapter/api",
   "schemes": [
     "https"
   ],
   "consumes": [],
   "produces": [],
   "paths": {
-    "/case": {
+    "/asms/case": {
       "post": {
         "responses": {
           "200": {
@@ -495,7 +495,7 @@
         ]
       }
     },
-    "/case/list": {
+    "/asms/case/list": {
       "post": {
         "responses": {
           "200": {
@@ -837,7 +837,7 @@
         ]
       }
     },
-    "/case/{ticketId}": {
+    "/asms/case/{ticketId}": {
       "get": {
         "responses": {
           "200": {
@@ -1501,7 +1501,7 @@
         ]
       }
     },
-    "/case/{ticketId}/history": {
+    "/asms/case/{ticketId}/history": {
       "get": {
         "responses": {
           "200": {
@@ -1605,7 +1605,7 @@
         ]
       }
     },
-    "/case/{ticketId}/file": {
+    "/asms/case/{ticketId}/file": {
       "post": {
         "responses": {
           "200": {
@@ -1655,7 +1655,7 @@
         ]
       }
     },
-    "/case/{ticketId}/file/{fileId}": {
+    "/asms/case/{ticketId}/file/{fileId}": {
       "get": {
         "responses": {
           "200": {
@@ -1711,7 +1711,7 @@
         ]
       }
     },
-    "/case/{ticketId}/note": {
+    "/asms/case/{ticketId}/note": {
       "post": {
         "responses": {
           "200": {
@@ -1741,7 +1741,7 @@
         ]
       }
     },
-    "/article/list": {
+    "/asms/article/list": {
       "post": {
         "responses": {
           "200": {
@@ -1933,7 +1933,7 @@
         ]
       }
     },
-    "/article/{articleId}/file/{fileId}": {
+    "/asms/article/{articleId}/file/{fileId}": {
       "get": {
         "responses": {
           "200": {
@@ -1997,7 +1997,7 @@
         ]
       }
     },
-    "/article/folders": {
+    "/asms/article/folders": {
       "get": {
         "responses": {
           "200": {
@@ -2017,7 +2017,7 @@
         ]
       }
     },
-    "/article/types": {
+    "/asms/article/types": {
       "get": {
         "responses": {
           "200": {
@@ -2033,7 +2033,7 @@
         "parameters": []
       }
     },
-    "/connection": {
+    "/asms/connection": {
       "get": {
         "responses": {
           "200": {
@@ -2048,7 +2048,7 @@
         "parameters": []
       }
     },
-    "/parameters/project": {
+    "/asms/parameters/project": {
       "get": {
         "responses": {
           "200": {
@@ -2065,7 +2065,7 @@
         "parameters": []
       }
     },
-    "/parameters/service": {
+    "/asms/parameters/service": {
       "get": {
         "responses": {
           "200": {
@@ -2098,7 +2098,7 @@
         ]
       }
     },
-    "/parameters/categoryByService": {
+    "/asms/parameters/categoryByService": {
       "get": {
         "responses": {
           "200": {
@@ -2121,7 +2121,7 @@
         ]
       }
     },
-    "/parameters/state": {
+    "/asms/parameters/state": {
       "get": {
         "responses": {
           "200": {
@@ -2147,7 +2147,7 @@
         ]
       }
     },
-    "/parameters/reasonsForState": {
+    "/asms/parameters/reasonsForState": {
       "get": {
         "responses": {
           "200": {
@@ -2176,7 +2176,7 @@
         ]
       }
     },
-    "/parameters/groupsByState": {
+    "/asms/parameters/groupsByState": {
       "get": {
         "responses": {
           "200": {
@@ -2205,7 +2205,7 @@
         ]
       }
     },
-    "/parameters/responsible": {
+    "/asms/parameters/responsible": {
       "get": {
         "responses": {
           "200": {
@@ -2228,7 +2228,7 @@
         ]
       }
     },
-    "/parameters/companies": {
+    "/asms/parameters/companies": {
       "get": {
         "responses": {
           "200": {
@@ -2254,7 +2254,7 @@
         ]
       }
     },
-    "/parameters/registryType": {
+    "/asms/parameters/registryType": {
       "get": {
         "responses": {
           "200": {
@@ -2270,7 +2270,7 @@
         "parameters": []
       }
     },
-    "/parameters/urgency": {
+    "/asms/parameters/urgency": {
       "get": {
         "responses": {
           "200": {
@@ -2286,7 +2286,7 @@
         "parameters": []
       }
     },
-    "/parameters/impact": {
+    "/asms/parameters/impact": {
       "get": {
         "responses": {
           "200": {
@@ -2302,7 +2302,7 @@
         "parameters": []
       }
     },
-    "/parameters/units": {
+    "/asms/parameters/units": {
       "get": {
         "responses": {
           "200": {
@@ -2325,7 +2325,7 @@
         ]
       }
     },
-    "/parameters/provider": {
+    "/asms/parameters/provider": {
       "get": {
         "responses": {
           "200": {
