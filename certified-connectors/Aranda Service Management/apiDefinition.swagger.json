@@ -1,10 +1,10 @@
 {
   "swagger": "2.0",
   "info": {
-    "x-ms-deployment-version": "1.1.2",
+    "x-ms-deployment-version": "1.2.2",
     "title": "Aranda Service Management",
     "description": "Boost your company's productivity and transform your users' experience with Aranda Service Management Suite, the multi-tenant solution that allows you to manage, integrate, and automate business processes and services.",
-    "version": "2.9",
+    "version": "2.10",
     "contact": {
       "name": "Aranda Software",
       "url": "https://arandasoft.com/",
@@ -38,7 +38,7 @@
           }
         },
         "operationId": "CreateCI",
-        "summary": "Create CIs",
+        "summary": "Create Configuration Item",
         "description": "Create CIs in the Aranda CMDB",
         "parameters": [
           {
