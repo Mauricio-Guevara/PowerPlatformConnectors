@@ -209,7 +209,31 @@
                   "x-nullable": true,
                   "x-ms-visibility": "important",
                   "title": "Cost center",
-                  "description": "Select a case type or enter manually a cost center id"
+                  "description": "Select a case type or enter manually a cost center id",
+                  "x-ms-dynamic-values": {
+                    "operationId": "GetCmdbProperties",
+                    "value-path": "id",
+                    "value-title": "name",
+                    "parameters": {
+                      "cmdbProperty": "costCenter",
+                      "projectId": {
+                        "parameter": "projectId"
+                      }
+                    }
+                  },
+                  "x-ms-dynamic-list": {
+                    "operationId": "GetCmdbProperties",
+                    "itemValuePath": "id",
+                    "itemTitlePath": "name",
+                    "parameters": {
+                      "projectId": {
+                        "parameterReference": "body/projectId"
+                      },
+                      "cmdbProperty": {
+                        "value": "costCenter"
+                      }
+                    }
+                  }
                 },
 
                 "reasonId": {
