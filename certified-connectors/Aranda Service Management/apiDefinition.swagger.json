@@ -1,10 +1,10 @@
 {
   "swagger": "2.0",
   "info": {
-    "x-ms-deployment-version": "1.6.1",
+    "x-ms-deployment-version": "1.7.1",
     "title": "Aranda Service Management",
     "description": "Boost your company's productivity and transform your users' experience with Aranda Service Management Suite, the multi-tenant solution that allows you to manage, integrate, and automate business processes and services.",
-    "version": "4.0",
+    "version": "5.0",
     "contact": {
       "name": "Aranda Software",
       "url": "https://arandasoft.com/",
@@ -433,7 +433,31 @@
                   "minimum": 1,
                   "x-ms-visibility": "advanced",
                   "title": "Location",
-                  "description": "Select a case type or enter manually a location id"
+                  "description": "Select a case type or enter manually a location id",
+                  "x-ms-dynamic-values": {
+                    "operationId": "GetCmdbProperties",
+                    "value-path": "id",
+                    "value-title": "name",
+                    "parameters": {
+                      "cmdbProperty": "location",
+                      "projectId": {
+                        "parameter": "projectId"
+                      }
+                    }
+                  },
+                  "x-ms-dynamic-list": {
+                    "operationId": "GetCmdbProperties",
+                    "itemValuePath": "id",
+                    "itemTitlePath": "name",
+                    "parameters": {
+                      "projectId": {
+                        "parameterReference": "body/projectId"
+                      },
+                      "cmdbProperty": {
+                        "value": "location"
+                      }
+                    }
+                  }
                 },
                 "additionalFields": {
                   "type": "array",
@@ -2835,7 +2859,8 @@
             "enum": [
               "costCenter",
               "manufacturer",
-              "provider"
+              "provider",
+              "location"
             ]
           },
           {
