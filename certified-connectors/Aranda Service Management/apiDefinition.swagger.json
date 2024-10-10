@@ -2475,7 +2475,7 @@
         "parameters": []
       }
     },
-    "/asms/parameters/project": {
+    "/property/project": {
       "get": {
         "responses": {
           "200": {
@@ -2492,7 +2492,7 @@
         "parameters": []
       }
     },
-    "/asms/parameters/service": {
+    "/property/service": {
       "get": {
         "responses": {
           "200": {
@@ -2525,7 +2525,7 @@
         ]
       }
     },
-    "/asms/parameters/categoryByService": {
+    "/property/categoryByService": {
       "get": {
         "responses": {
           "200": {
@@ -2548,7 +2548,7 @@
         ]
       }
     },
-    "/asms/parameters/state": {
+    "/property/state": {
       "get": {
         "responses": {
           "200": {
@@ -2574,7 +2574,7 @@
         ]
       }
     },
-    "/asms/parameters/reasonsForState": {
+    "/property/reasonsForState": {
       "get": {
         "responses": {
           "200": {
@@ -2603,7 +2603,7 @@
         ]
       }
     },
-    "/asms/parameters/groupsByState": {
+    "/property/groupsByState": {
       "get": {
         "responses": {
           "200": {
@@ -2632,7 +2632,7 @@
         ]
       }
     },
-    "/asms/parameters/responsible": {
+    "/property/responsible": {
       "get": {
         "responses": {
           "200": {
@@ -2655,7 +2655,7 @@
         ]
       }
     },
-    "/asms/parameters/companies": {
+    "/property/companies": {
       "get": {
         "responses": {
           "200": {
@@ -2716,7 +2716,7 @@
         ]
       }
     },
-    "/asms/parameters/units": {
+    "/property/units": {
       "get": {
         "responses": {
           "200": {
@@ -2739,7 +2739,7 @@
         ]
       }
     },
-    "/asms/parameters/provider": {
+    "/property/provider": {
       "get": {
         "responses": {
           "200": {
