@@ -1,10 +1,10 @@
 {
   "swagger": "2.0",
   "info": {
-    "x-ms-deployment-version": "1.8.1",
+    "x-ms-deployment-version": "1.9.2",
     "title": "Aranda Service Management",
     "description": "Boost your company's productivity and transform your users' experience with Aranda Service Management Suite, the multi-tenant solution that allows you to manage, integrate, and automate business processes and services.",
-    "version": "6.0",
+    "version": "6.4",
     "contact": {
       "name": "Aranda Software",
       "url": "https://arandasoft.com/",
@@ -281,7 +281,7 @@
                   "title": "Acceptance date",
                   "description": "Acceptance date"
                 },
-                "installationDate": {
+                "checkInDate": {
                   "type": "string",
                   "format": "date-time",
                   "x-nullable": true,
@@ -289,14 +289,13 @@
                   "title": "Date of delivery to the company",
                   "description": "Date of delivery to the company"
                 },
-                "responsibleDate": {
+                "responsibilityDate": {
                   "type": "string",
                   "format": "date-time",
                   "x-nullable": true,
                   "x-ms-visibility": "advanced",
                   "title": "Initial date of responsibility",
                   "description": "Initial date of responsibility"
-
                 },
                 "barCode": {
                   "type": "string",
