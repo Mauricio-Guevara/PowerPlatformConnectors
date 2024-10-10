@@ -1,10 +1,10 @@
 {
   "swagger": "2.0",
   "info": {
-    "x-ms-deployment-version": "1.7.1",
+    "x-ms-deployment-version": "1.8.1",
     "title": "Aranda Service Management",
     "description": "Boost your company's productivity and transform your users' experience with Aranda Service Management Suite, the multi-tenant solution that allows you to manage, integrate, and automate business processes and services.",
-    "version": "5.0",
+    "version": "6.0",
     "contact": {
       "name": "Aranda Software",
       "url": "https://arandasoft.com/",
@@ -51,6 +51,30 @@
             "schema": {
               "type": "object",
               "properties": {
+                "name": {
+                  "type": "string",
+                  "x-ms-visibility": "important",
+                  "description": "Name",
+                  "title": "Name"
+                },
+                "description": {
+                  "type": "string",
+                  "x-ms-visibility": "important",
+                  "title": "Description",
+                  "description": "Detailed description of the CI"
+                },
+                "serial": {
+                  "type": "string",
+                  "x-ms-visibility": "important",
+                  "title": "Serial",
+                  "description": "Serial"
+                },
+                "assetTag": {
+                  "type": "string",
+                  "x-ms-visibility": "important",
+                  "title": "Asset tag",
+                  "description": "Asset tag"
+                },
                 "projectId": {
                   "type": "integer",
                   "format": "int32",
@@ -90,45 +114,20 @@
                     }
                   }
                 },
-                "name": {
-                  "type": "string",
-                  "x-ms-visibility": "important",
-                  "description": "Name",
-                  "title": "Name"
-                },
-                "description": {
-                  "type": "string",
-                  "x-ms-visibility": "important",
-                  "title": "Description",
-                  "description": "Detailed description of the CI"
-                },
-                "serial": {
-                  "type": "string",
-                  "x-ms-visibility": "important",
-                  "title": "Serial",
-                  "description": "Serial"
-                },
-                "assetTag": {
-                  "type": "string",
-                  "x-ms-visibility": "important",
-                  "title": "Asset tag",
-                  "description": "Asset tag"
-                },
-                "licenseNumber": {
-                  "type": "string",
-                  "x-ms-visibility": "important",
-                  "title": "License number",
-                  "description": "License number"
-                },
-
                 "responsibleId": {
                   "type": "integer",
                   "format": "int32",
                   "minimum": 1,
                   "x-nullable": true,
                   "x-ms-visibility": "important",
-                  "title": "Responsible",
-                  "description": "Select a case type or enter manually a responsible id"
+                  "title": "Responsible Id",
+                  "description": "Responsible Id"
+                },
+                "licenseNumber": {
+                  "type": "string",
+                  "x-ms-visibility": "important",
+                  "title": "License number",
+                  "description": "License number"
                 },
                 "manufacturerId": {
                   "type": "integer",
@@ -250,48 +249,14 @@
                     }
                   }
                 },
-                "costCenterId": {
-                  "type": "integer",
-                  "format": "int32",
-                  "minimum": 1,
-                  "x-nullable": true,
-                  "x-ms-visibility": "important",
-                  "title": "Cost center",
-                  "description": "Select a case type or enter manually a cost center id",
-                  "x-ms-dynamic-values": {
-                    "operationId": "GetCmdbProperties",
-                    "value-path": "id",
-                    "value-title": "name",
-                    "parameters": {
-                      "cmdbProperty": "costCenter",
-                      "projectId": {
-                        "parameter": "projectId"
-                      }
-                    }
-                  },
-                  "x-ms-dynamic-list": {
-                    "operationId": "GetCmdbProperties",
-                    "itemValuePath": "id",
-                    "itemTitlePath": "name",
-                    "parameters": {
-                      "projectId": {
-                        "parameterReference": "body/projectId"
-                      },
-                      "cmdbProperty": {
-                        "value": "costCenter"
-                      }
-                    }
-                  }
-                },
-
                 "reasonId": {
                   "type": "integer",
                   "format": "int32",
                   "minimum": 1,
                   "x-nullable": true,
                   "x-ms-visibility": "advanced",
-                  "title": "Reason",
-                  "description": "Select a case type or enter manually a reason id"
+                  "title": "Reason Id",
+                  "description": "Reason Id"
                 },
                 "price": {
                   "type": "number",
@@ -368,6 +333,39 @@
                     "parameters": {
                       "catalog": {
                         "value": "measureUnit"
+                      }
+                    }
+                  }
+                },
+                "costCenterId": {
+                  "type": "integer",
+                  "format": "int32",
+                  "minimum": 1,
+                  "x-nullable": true,
+                  "x-ms-visibility": "advanced",
+                  "title": "Cost center",
+                  "description": "Select a case type or enter manually a cost center id",
+                  "x-ms-dynamic-values": {
+                    "operationId": "GetCmdbProperties",
+                    "value-path": "id",
+                    "value-title": "name",
+                    "parameters": {
+                      "cmdbProperty": "costCenter",
+                      "projectId": {
+                        "parameter": "projectId"
+                      }
+                    }
+                  },
+                  "x-ms-dynamic-list": {
+                    "operationId": "GetCmdbProperties",
+                    "itemValuePath": "id",
+                    "itemTitlePath": "name",
+                    "parameters": {
+                      "projectId": {
+                        "parameterReference": "body/projectId"
+                      },
+                      "cmdbProperty": {
+                        "value": "costCenter"
                       }
                     }
                   }
@@ -481,7 +479,13 @@
                   },
                   "x-ms-visibility": "advanced"
                 }
-              }
+              },
+              "required": [
+                "projectId",
+                "categoryId",
+                "name",
+                "responsibleId"
+              ]
             }
           }
         ]
