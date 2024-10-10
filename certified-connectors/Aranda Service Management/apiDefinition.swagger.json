@@ -1,10 +1,10 @@
 {
   "swagger": "2.0",
   "info": {
-    "x-ms-deployment-version": "1.5.1",
+    "x-ms-deployment-version": "1.6.1",
     "title": "Aranda Service Management",
     "description": "Boost your company's productivity and transform your users' experience with Aranda Service Management Suite, the multi-tenant solution that allows you to manage, integrate, and automate business processes and services.",
-    "version": "3.0",
+    "version": "4.0",
     "contact": {
       "name": "Aranda Software",
       "url": "https://arandasoft.com/",
@@ -224,7 +224,31 @@
                   "x-nullable": true,
                   "x-ms-visibility": "important",
                   "title": "Provider",
-                  "description": "elect a case type or enter manually a provider id"
+                  "description": "elect a case type or enter manually a provider id",
+                  "x-ms-dynamic-values": {
+                    "operationId": "GetCmdbProperties",
+                    "value-path": "id",
+                    "value-title": "name",
+                    "parameters": {
+                      "cmdbProperty": "provider",
+                      "projectId": {
+                        "parameter": "projectId"
+                      }
+                    }
+                  },
+                  "x-ms-dynamic-list": {
+                    "operationId": "GetCmdbProperties",
+                    "itemValuePath": "id",
+                    "itemTitlePath": "name",
+                    "parameters": {
+                      "projectId": {
+                        "parameterReference": "body/projectId"
+                      },
+                      "cmdbProperty": {
+                        "value": "provider"
+                      }
+                    }
+                  }
                 },
                 "costCenterId": {
                   "type": "integer",
