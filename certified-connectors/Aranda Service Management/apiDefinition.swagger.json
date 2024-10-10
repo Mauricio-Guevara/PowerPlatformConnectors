@@ -791,9 +791,22 @@
                   "x-nullable": true,
                   "x-ms-visibility": "advanced",
                   "x-ms-dynamic-values": {
-                    "operationId": "GetUrgency",
+                    "operationId": "GetCatalog",
                     "value-path": "id",
-                    "value-title": "name"
+                    "value-title": "name",
+                    "parameters": {
+                      "catalog": "urgency"
+                    }
+                  },
+                  "x-ms-dynamic-list": {
+                    "operationId": "GetCatalog",
+                    "itemValuePath": "id",
+                    "itemTitlePath": "name",
+                    "parameters": {
+                      "catalog": {
+                        "value": "urgency"
+                      }
+                    }
                   }
                 },
                 "impactId": {
@@ -1800,9 +1813,22 @@
                   "x-nullable": true,
                   "x-ms-visibility": "advanced",
                   "x-ms-dynamic-values": {
-                    "operationId": "GetUrgency",
+                    "operationId": "GetCatalog",
                     "value-path": "id",
-                    "value-title": "name"
+                    "value-title": "name",
+                    "parameters": {
+                      "catalog": "urgency"
+                    }
+                  },
+                  "x-ms-dynamic-list": {
+                    "operationId": "GetCatalog",
+                    "itemValuePath": "id",
+                    "itemTitlePath": "name",
+                    "parameters": {
+                      "catalog": {
+                        "value": "urgency"
+                      }
+                    }
                   }
                 },
                 "impactId": {
@@ -2615,22 +2641,6 @@
         },
         "summary": "Registry Type",
         "operationId": "GetRegistryType",
-        "x-ms-visibility": "internal",
-        "parameters": []
-      }
-    },
-    "/asms/parameters/urgency": {
-      "get": {
-        "responses": {
-          "200": {
-            "description": "OK",
-            "schema": {
-              "$ref": "#/definitions/propertyTicket_response"
-            }
-          }
-        },
-        "summary": "Urgency",
-        "operationId": "GetUrgency",
         "x-ms-visibility": "internal",
         "parameters": []
       }
