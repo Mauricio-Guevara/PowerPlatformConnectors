@@ -1,10 +1,10 @@
 {
   "swagger": "2.0",
   "info": {
-    "x-ms-deployment-version": "1.2.2",
+    "x-ms-deployment-version": "1.4.3",
     "title": "Aranda Service Management",
     "description": "Boost your company's productivity and transform your users' experience with Aranda Service Management Suite, the multi-tenant solution that allows you to manage, integrate, and automate business processes and services.",
-    "version": "2.10",
+    "version": "2.12",
     "contact": {
       "name": "Aranda Software",
       "url": "https://arandasoft.com/",
@@ -38,6 +38,9 @@
           }
         },
         "operationId": "CreateCI",
+        "consumes": [
+          "application/json"
+        ],
         "summary": "Create Configuration Item",
         "description": "Create CIs in the Aranda CMDB",
         "parameters": [
@@ -120,7 +123,25 @@
                   "x-nullable": true,
                   "x-ms-visibility": "important",
                   "title": "Brand",
-                  "description": "Select a case type or enter manually a brand id"
+                  "description": "Select a case type or enter manually a brand id",
+                  "x-ms-dynamic-values": {
+                    "operationId": "GetCatalog",
+                    "value-path": "id",
+                    "value-title": "name",
+                    "parameters": {
+                      "catalog": "brand"
+                    }
+                  },
+                  "x-ms-dynamic-list": {
+                    "operationId": "GetCatalog",
+                    "itemValuePath": "id",
+                    "itemTitlePath": "name",
+                    "parameters": {
+                      "catalog": {
+                        "value": "brand"
+                      }
+                    }
+                  }
                 },
                 "modelId": {
                   "type": "integer",
@@ -129,7 +150,25 @@
                   "x-nullable": true,
                   "x-ms-visibility": "important",
                   "title": "Model",
-                  "description": "Select a case type or enter manually a model id"
+                  "description": "Select a case type or enter manually a model id",
+                  "x-ms-dynamic-values": {
+                    "operationId": "GetCatalog",
+                    "value-path": "id",
+                    "value-title": "name",
+                    "parameters": {
+                      "catalog": "model"
+                    }
+                  },
+                  "x-ms-dynamic-list": {
+                    "operationId": "GetCatalog",
+                    "itemValuePath": "id",
+                    "itemTitlePath": "name",
+                    "parameters": {
+                      "catalog": {
+                        "value": "model"
+                      }
+                    }
+                  }
                 },
                 "providerId": {
                   "type": "integer",
@@ -218,8 +257,25 @@
                   "x-nullable": true,
                   "x-ms-visibility": "advanced",
                   "title": "Measure unit",
-                  "description": "Select a case type or enter manually a measure unit id"
-
+                  "description": "Select a case type or enter manually a measure unit id",
+                  "x-ms-dynamic-values": {
+                    "operationId": "GetCatalog",
+                    "value-path": "id",
+                    "value-title": "name",
+                    "parameters": {
+                      "catalog": "measureUnit"
+                    }
+                  },
+                  "x-ms-dynamic-list": {
+                    "operationId": "GetCatalog",
+                    "itemValuePath": "id",
+                    "itemTitlePath": "name",
+                    "parameters": {
+                      "catalog": {
+                        "value": "measureUnit"
+                      }
+                    }
+                  }
                 },
                 "impactId": {
                   "type": "integer",
@@ -228,7 +284,25 @@
                   "x-nullable": true,
                   "x-ms-visibility": "advanced",
                   "title": "Impact",
-                  "description": "Select a case type or enter manually a impact id"
+                  "description": "Select a case type or enter manually a impact id",
+                  "x-ms-dynamic-values": {
+                    "operationId": "GetCatalog",
+                    "value-path": "id",
+                    "value-title": "name",
+                    "parameters": {
+                      "catalog": "impact"
+                    }
+                  },
+                  "x-ms-dynamic-list": {
+                    "operationId": "GetCatalog",
+                    "itemValuePath": "id",
+                    "itemTitlePath": "name",
+                    "parameters": {
+                      "catalog": {
+                        "value": "impact"
+                      }
+                    }
+                  }
 
                 },
                 "riskId": {
@@ -238,7 +312,25 @@
                   "x-ms-visibility": "advanced",
                   "x-nullable": true,
                   "title": "Risk",
-                  "description": "Select a case type or enter manually a risk id"
+                  "description": "Select a case type or enter manually a risk id",
+                  "x-ms-dynamic-values": {
+                    "operationId": "GetCatalog",
+                    "value-path": "id",
+                    "value-title": "name",
+                    "parameters": {
+                      "catalog": "risk"
+                    }
+                  },
+                  "x-ms-dynamic-list": {
+                    "operationId": "GetCatalog",
+                    "itemValuePath": "id",
+                    "itemTitlePath": "name",
+                    "parameters": {
+                      "catalog": {
+                        "value": "risk"
+                      }
+                    }
+                  }
                 },
                 "locationId": {
                   "type": "integer",
@@ -2557,6 +2649,40 @@
         "operationId": "GetImpact",
         "x-ms-visibility": "internal",
         "parameters": []
+      }
+    },
+    "/cmdb/parameters/{catalog}": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "default",
+            "schema": {
+              "$ref": "#/definitions/propertyTicket_response"
+            }
+          }
+        },
+        "summary": "Catalog",
+        "description": "Catalog",
+        "operationId": "GetCatalog",
+        "x-ms-visibility": "internal",
+        "parameters": [
+          {
+            "name": "catalog",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "x-ms-url-encoding": "single",
+            "enum": [
+              "measureUnit",
+              "brand",
+              "model",
+              "urgency",
+              "impact",
+              "registryType",
+              "risk"
+            ]
+          }
+        ]
       }
     },
     "/asms/parameters/units": {

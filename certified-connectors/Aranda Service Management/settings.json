@@ -1,9 +1,9 @@
 {
   "connectorId": "shared_aranda-20service-20management-5f722d9d35a9d96c7-8fe13a618b2242b5",
   "environment": "73a4e6b1-6145-ecac-8af3-b0aad2602d04",
-  "apiProperties": "D:\\ARANDA\\ADAPTER_ASMS\\ForkMicrosoft\\PowerPlatformConnectors\\certified-connectors\\Aranda Service Management\\apiProperties.json",
-  "apiDefinition": "D:\\ARANDA\\ADAPTER_ASMS\\ForkMicrosoft\\PowerPlatformConnectors\\certified-connectors\\Aranda Service Management\\apiDefinition.swagger.json",
-  "icon": "D:\\ARANDA\\ADAPTER_ASMS\\ForkMicrosoft\\PowerPlatformConnectors\\certified-connectors\\Aranda Service Management\\icon.png",
+  "apiProperties": "D:\\ARANDA\\Adapter_UI\\ForkMicrosoft\\PowerPlatformConnectors\\certified-connectors\\Aranda Service Management\\apiProperties.json",
+  "apiDefinition": "D:\\ARANDA\\Adapter_UI\\ForkMicrosoft\\PowerPlatformConnectors\\certified-connectors\\Aranda Service Management\\apiDefinition.swagger.json",
+  "icon": "D:\\ARANDA\\Adapter_UI\\ForkMicrosoft\\PowerPlatformConnectors\\certified-connectors\\Aranda Service Management\\icon.png",
   "powerAppsUrl": "https://api.powerapps.com",
   "powerAppsApiVersion": "2016-11-01"
 }
