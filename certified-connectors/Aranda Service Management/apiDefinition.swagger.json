@@ -2168,7 +2168,7 @@
         ]
       }
     },
-    "/asms/article/list": {
+    "/kb/article/list": {
       "post": {
         "responses": {
           "200": {
@@ -2360,7 +2360,7 @@
         ]
       }
     },
-    "/asms/article/{articleId}/file/{fileId}": {
+    "/kb/article/{articleId}/file/{fileId}": {
       "get": {
         "responses": {
           "200": {
@@ -2424,7 +2424,7 @@
         ]
       }
     },
-    "/asms/article/folders": {
+    "/kb/article/folders": {
       "get": {
         "responses": {
           "200": {
@@ -2444,7 +2444,7 @@
         ]
       }
     },
-    "/asms/article/types": {
+    "/kb/article/types": {
       "get": {
         "responses": {
           "200": {
