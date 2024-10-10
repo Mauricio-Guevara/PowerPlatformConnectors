@@ -1,10 +1,10 @@
 {
   "swagger": "2.0",
   "info": {
-    "x-ms-deployment-version": "1.4.3",
+    "x-ms-deployment-version": "1.5.1",
     "title": "Aranda Service Management",
     "description": "Boost your company's productivity and transform your users' experience with Aranda Service Management Suite, the multi-tenant solution that allows you to manage, integrate, and automate business processes and services.",
-    "version": "2.12",
+    "version": "3.0",
     "contact": {
       "name": "Aranda Software",
       "url": "https://arandasoft.com/",
@@ -57,7 +57,12 @@
                   "minimum": 1,
                   "x-ms-visibility": "important",
                   "title": "Project",
-                  "description": "Select a case type or enter manually a project id"
+                  "description": "Select a case type or enter manually a project id",
+                  "x-ms-dynamic-values": {
+                    "operationId": "GetProject",
+                    "value-path": "id",
+                    "value-title": "name"
+                  }
                 },
                 "categoryId": {
                   "type": "integer",
@@ -65,7 +70,25 @@
                   "minimum": 1,
                   "title": "Category",
                   "description": "Select a case type or enter manually a category id",
-                  "x-ms-visibility": "important"
+                  "x-ms-visibility": "important",
+                  "x-ms-dynamic-values": {
+                    "operationId": "GetCatalog",
+                    "value-path": "id",
+                    "value-title": "name",
+                    "parameters": {
+                      "catalog": "category"
+                    }
+                  },
+                  "x-ms-dynamic-list": {
+                    "operationId": "GetCatalog",
+                    "itemValuePath": "id",
+                    "itemTitlePath": "name",
+                    "parameters": {
+                      "catalog": {
+                        "value": "category"
+                      }
+                    }
+                  }
                 },
                 "name": {
                   "type": "string",
@@ -2475,7 +2498,7 @@
         "parameters": []
       }
     },
-    "/property/project": {
+    "/property/case/project": {
       "get": {
         "responses": {
           "200": {
@@ -2492,7 +2515,7 @@
         "parameters": []
       }
     },
-    "/property/service": {
+    "/property/case/service": {
       "get": {
         "responses": {
           "200": {
@@ -2525,7 +2548,7 @@
         ]
       }
     },
-    "/property/categoryByService": {
+    "/property/case/categoryByService": {
       "get": {
         "responses": {
           "200": {
@@ -2548,7 +2571,7 @@
         ]
       }
     },
-    "/property/state": {
+    "/property/case/state": {
       "get": {
         "responses": {
           "200": {
@@ -2574,7 +2597,7 @@
         ]
       }
     },
-    "/property/reasonsForState": {
+    "/property/case/reasonsForState": {
       "get": {
         "responses": {
           "200": {
@@ -2603,7 +2626,7 @@
         ]
       }
     },
-    "/property/groupsByState": {
+    "/property/case/groupsByState": {
       "get": {
         "responses": {
           "200": {
@@ -2632,7 +2655,7 @@
         ]
       }
     },
-    "/property/responsible": {
+    "/property/case/responsible": {
       "get": {
         "responses": {
           "200": {
@@ -2655,7 +2678,7 @@
         ]
       }
     },
-    "/property/companies": {
+    "/property/case/companies": {
       "get": {
         "responses": {
           "200": {
@@ -2681,7 +2704,7 @@
         ]
       }
     },
-    "/cmdb/parameters/{catalog}": {
+    "/property/{catalog}": {
       "get": {
         "responses": {
           "200": {
@@ -2709,13 +2732,54 @@
               "urgency",
               "impact",
               "registryType",
-              "risk"
+              "risk",
+              "category"
             ]
           }
         ]
       }
     },
-    "/property/units": {
+    "/property/ci/project/{projectId}/{cmdbProperty}": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "default",
+            "schema": {
+              "$ref": "#/definitions/propertyTicket_response"
+            }
+          }
+        },
+        "summary": "Get Cmdb Properties",
+        "description": "Get Cmdb Properties",
+        "operationId": "GetCmdbProperties",
+        "x-ms-visibility": "internal",
+        "parameters": [
+          {
+            "name": "cmdbProperty",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "x-ms-url-encoding": "single",
+            "enum": [
+              "costCenter",
+              "manufacturer",
+              "provider"
+            ]
+          },
+          {
+            "name": "projectId",
+            "in": "path",
+            "required": true,
+            "type": "integer",
+            "x-ms-url-encoding": "single",
+            "x-ms-summary": "Project id",
+            "description": "Project id",
+            "format": "int32"
+          }
+        ]
+      }
+    },
+    "/property/case/units": {
       "get": {
         "responses": {
           "200": {
@@ -2738,7 +2802,7 @@
         ]
       }
     },
-    "/property/provider": {
+    "/property/case/provider": {
       "get": {
         "responses": {
           "200": {
