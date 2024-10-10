@@ -2681,7 +2681,6 @@
         ]
       }
     },
-
     "/cmdb/parameters/{catalog}": {
       "get": {
         "responses": {
