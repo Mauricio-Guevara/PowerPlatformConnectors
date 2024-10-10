@@ -2460,7 +2460,7 @@
         "parameters": []
       }
     },
-    "/asms/connection": {
+    "/connection": {
       "get": {
         "responses": {
           "200": {
