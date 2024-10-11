@@ -1,10 +1,10 @@
 {
   "swagger": "2.0",
   "info": {
-    "x-ms-deployment-version": "1.9.2",
+    "x-ms-deployment-version": "2.0.0",
     "title": "Aranda Service Management",
     "description": "Boost your company's productivity and transform your users' experience with Aranda Service Management Suite, the multi-tenant solution that allows you to manage, integrate, and automate business processes and services.",
-    "version": "6.4",
+    "version": "7.0",
     "contact": {
       "name": "Aranda Software",
       "url": "https://arandasoft.com/",
@@ -2597,7 +2597,7 @@
         "parameters": []
       }
     },
-    "/property/case/project": {
+    "/property/project": {
       "get": {
         "responses": {
           "200": {
@@ -2614,7 +2614,7 @@
         "parameters": []
       }
     },
-    "/property/case/service": {
+    "/property/service": {
       "get": {
         "responses": {
           "200": {
@@ -2647,7 +2647,7 @@
         ]
       }
     },
-    "/property/case/categoryByService": {
+    "/property/categoryByService": {
       "get": {
         "responses": {
           "200": {
@@ -2670,7 +2670,7 @@
         ]
       }
     },
-    "/property/case/state": {
+    "/property/state": {
       "get": {
         "responses": {
           "200": {
@@ -2696,7 +2696,7 @@
         ]
       }
     },
-    "/property/case/reasonsForState": {
+    "/property/reasonsForState": {
       "get": {
         "responses": {
           "200": {
@@ -2725,7 +2725,7 @@
         ]
       }
     },
-    "/property/case/groupsByState": {
+    "/property/groupsByState": {
       "get": {
         "responses": {
           "200": {
@@ -2754,7 +2754,7 @@
         ]
       }
     },
-    "/property/case/responsible": {
+    "/property/responsible": {
       "get": {
         "responses": {
           "200": {
@@ -2777,7 +2777,7 @@
         ]
       }
     },
-    "/property/case/companies": {
+    "/property/companies": {
       "get": {
         "responses": {
           "200": {
@@ -2803,7 +2803,7 @@
         ]
       }
     },
-    "/property/{catalog}": {
+    "/property/catalog/{catalog}": {
       "get": {
         "responses": {
           "200": {
@@ -2838,7 +2838,7 @@
         ]
       }
     },
-    "/property/ci/project/{projectId}/{cmdbProperty}": {
+    "/property/project/{projectId}/{cmdbProperty}": {
       "get": {
         "responses": {
           "200": {
@@ -2879,7 +2879,7 @@
         ]
       }
     },
-    "/property/case/units": {
+    "/property/units": {
       "get": {
         "responses": {
           "200": {
@@ -2902,7 +2902,7 @@
         ]
       }
     },
-    "/property/case/provider": {
+    "/property/provider": {
       "get": {
         "responses": {
           "200": {
